@@ -1,1387 +1,323 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spibody Digitalz Hub | Web Design & Creative Branding</title>
-  <meta name="description" content="Spibody Digitalz Hub creates premium websites, graphic designs, brand identities, social media creatives, and promotional videos for businesses." />  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <title>Spibody Digitalz Hub | Premium Web Design & Branding</title>
+
+  <meta
+    name="description"
+    content="Spibody Digitalz Hub helps businesses grow with premium websites, branding, graphics, and digital solutions."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">  <style>
-    :root {
-      --bg: #050505;
-      --surface: #101010;
-      --surface-2: #171717;
-      --gold: #ffd700;
-      --gold-soft: rgba(255, 215, 0, 0.12);
-      --text: #ffffff;
-      --muted: #b8b8b8;
-      --border: rgba(255, 255, 255, 0.1);
-      --whatsapp: #25d366;
-    }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(123, 44, 255, 0.22), transparent 30%),
-        radial-gradient(circle at top right, rgba(255, 140, 26, 0.13), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.1), transparent 32%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-      text-rendering: optimizeSpeed;
-    }
-
-    .bg-orb {
-      position: fixed;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      filter: blur(55px);
-      opacity: 0.24;
-      pointer-events: none;
-      z-index: -1;
-      animation: orbMove 9s ease-in-out infinite alternate;
-    }
-
-    .orb-one { background: var(--purple); top: 18%; left: -80px; }
-    .orb-two { background: var(--orange); top: 55%; right: -100px; animation-delay: 1.5s; }
-    .orb-three { background: var(--green); bottom: 8%; left: 38%; animation-delay: 3s; opacity: 0.16; }
-
-    @keyframes orbMove {
-      from { transform: translate3d(0, 0, 0) scale(1); }
-      to { transform: translate3d(24px, -30px, 0) scale(1.12); }
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: auto;
-    }
-
-    .loader {
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 30%, rgba(123, 44, 255, 0.28), transparent 36%),
-        radial-gradient(circle at 60% 70%, rgba(255, 140, 26, 0.16), transparent 35%),
-        #05030a;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.45s ease, visibility 0.45s ease;
-    }
-
-    .loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .premium-loader {
-      width: min(340px, 88vw);
-      text-align: center;
-      padding: 34px 28px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55), 0 0 60px rgba(123, 44, 255, 0.18);
-      backdrop-filter: blur(16px);
-      animation: loaderFloat 1.8s ease-in-out infinite alternate;
-    }
-
-    .loader-logo-wrap {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 22px;
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-
-    .loader-logo {
-      width: 62px;
-      height: 62px;
-      border-radius: 18px;
-      object-fit: cover;
-      z-index: 2;
-      box-shadow: 0 0 24px rgba(255, 140, 26, 0.28);
-    }
-
-    .loader-ring {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: conic-gradient(from 90deg, var(--purple), var(--orange), var(--green), var(--purple));
-      animation: spin 1.2s linear infinite;
-    }
-
-    .loader-ring::after {
-      content: '';
-      position: absolute;
-      inset: 5px;
-      border-radius: 50%;
-      background: #05030a;
-    }
-
-    .premium-loader h2 {
-      font-size: 17px;
-      letter-spacing: 2px;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-
-    .premium-loader p {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
-
-    .loader-bar {
-      height: 7px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .loader-bar span {
-      display: block;
-      height: 100%;
-      width: 45%;
-      border-radius: inherit;
-      background: var(--brand-gradient);
-      animation: loadSlide 1.05s ease-in-out infinite alternate;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes loaderFloat {
-      from { transform: translateY(0); }
-      to { transform: translateY(-10px); }
-    }
-
-    @keyframes loadSlide {
-      from { transform: translateX(-15%); }
-      to { transform: translateX(135%); }
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.84);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--gold);
-      white-space: nowrap;
-    }
-
-    .logo-img {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 0 18px rgba(255, 215, 0, 0.18);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: 14px;
-      color: #dedede;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--gold);
-      color: #000;
-      padding: 13px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 18px 42px rgba(255, 140, 26, 0.26), 0 0 34px rgba(123, 44, 255, 0.28);
-      filter: saturate(1.15);
-    }
-
-    .btn:active {
-      transform: translateY(-1px) scale(0.99);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border-color: rgba(255, 215, 0, 0.45);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold-soft);
-      color: var(--gold);
-    }
-
-    .hero {
-      min-height: calc(100vh - 76px);
-      display: grid;
-      align-items: center;
-      padding: 80px 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      background: var(--brand-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-size: 220% 220%;
-      animation: gradientText 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes gradientText {
-      from { background-position: 0% 50%; }
-      to { background-position: 100% 50%; }
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 660px;
-      font-size: 17px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 34px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 620px;
-    }
-
-    .stat {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--gold);
-      font-size: 24px;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255, 215, 0, 0.14), rgba(255, 255, 255, 0.04));
-      border: 1px solid rgba(255, 215, 0, 0.25);
-      border-radius: 30px;
-      padding: 28px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-    }
-
-    .hero-card-inner {
-      background: #080808;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      padding: 26px;
-    }
-
-    .hero-card h3 {
-      font-size: 24px;
-      margin-bottom: 14px;
-    }
-
-    .check-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .check-list li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      color: #d9d9d9;
-      font-size: 14px;
-    }
-
-    .check-list li::before {
-      content: '✓';
-      color: var(--gold);
-      font-weight: 800;
-    }
-
-    section {
-      padding: 86px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 36px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.15;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
-      transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 140, 26, 0.62);
-      background: rgba(123, 44, 255, 0.08);
-      box-shadow: 0 20px 48px rgba(123, 44, 255, 0.18);
-    }
-
-    .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      background: var(--gold-soft);
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      font-size: 23px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .card p,
-    .card li {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card ul {
-      margin-top: 14px;
-      padding-left: 18px;
-    }
-
-    .about-box {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
-      align-items: stretch;
-      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 215, 0, 0.18);
-      border-radius: 30px;
-      padding: 32px;
-    }
-
-    .profile-card {
-      background: #080808;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-    }
-
-    .avatar {
-      width: 86px;
-      height: 86px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, var(--gold), #fff5ad);
-      color: #000;
-      display: grid;
-      place-items: center;
-      font-size: 34px;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-
-    .profile-card h3 {
-      font-size: 24px;
-    }
-
-    .profile-card p,
-    .about-content p {
-      color: var(--muted);
-    }
-
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .tag {
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border);
-      color: #ddd;
-      font-size: 13px;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
-
-    .portfolio-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      aspect-ratio: 1 / 1;
-      cursor: pointer;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.35s ease, filter 0.35s ease;
-      content-visibility: auto;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.09) rotate(1.2deg);
-      filter: brightness(0.72) saturate(1.16);
-    }
-
-    .portfolio-item span {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      right: 14px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 12px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: 0.3s ease;
-    }
-
-    .portfolio-item:hover span {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .price-card {
-      position: relative;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-    }
-
-    .price-card.featured {
-      border-color: rgba(255, 215, 0, 0.6);
-      background: linear-gradient(180deg, rgba(255, 215, 0, 0.12), rgba(255, 255, 255, 0.04));
-    }
-
-    .badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: var(--gold);
-      color: #000;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .price-card h3 {
-      font-size: 22px;
-      padding-right: 86px;
-    }
-
-    .price {
-      color: var(--gold);
-      font-size: 34px;
-      font-weight: 800;
-      margin: 12px 0;
-    }
-
-    .price small {
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 400;
-    }
-
-    .design-prices {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .mini-price {
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .mini-price strong {
-      color: var(--gold);
-      display: block;
-      margin-top: 6px;
-      font-size: 19px;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      counter-reset: step;
-    }
-
-    .process-card {
-      counter-increment: step;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .process-card::before {
-      content: '0' counter(step);
-      color: var(--gold);
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
-
-    .process-card h3 {
-      margin: 12px 0 8px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 255, 255, 0.04));
-      border: 1px solid rgba(255, 215, 0, 0.28);
-      border-radius: 34px;
-      padding: 50px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 24px;
-    }
-
-    .contact-box {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .contact-info,
-    form {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 26px;
-    }
-
-    .contact-info p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .contact-line {
-      display: block;
-      padding: 14px 0;
-      border-top: 1px solid var(--border);
-      color: #ddd;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 15px 16px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: #070707;
-      color: #fff;
-      outline: none;
-      font-size: 14px;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: rgba(255, 215, 0, 0.6);
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--border);
-      color: #777;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: var(--whatsapp);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 28px;
-      box-shadow: 0 16px 35px rgba(37, 211, 102, 0.35);
-      z-index: 2000;
-      transition: 0.25s ease;
-      animation: whatsappPulse 2.2s ease-in-out infinite;
-    }
-
-    .whatsapp-float::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-      border-radius: 50%;
-      border: 2px solid rgba(37, 211, 102, 0.35);
-      animation: whatsappRing 2.2s ease-out infinite;
-    }
-
-    .whatsapp-float svg {
-      position: relative;
-      z-index: 2;
-      animation: whatsappIconBounce 1.8s ease-in-out infinite;
-    }
-
-    .whatsapp-float:hover {
-      transform: translateY(-5px) scale(1.08);
-      box-shadow: 0 20px 45px rgba(37, 211, 102, 0.48);
-      animation-play-state: paused;
-    }
-
-    @keyframes whatsappPulse {
-      0%, 100% { box-shadow: 0 16px 35px rgba(37, 211, 102, 0.35); }
-      50% { box-shadow: 0 18px 48px rgba(37, 211, 102, 0.62); }
-    }
-
-    @keyframes whatsappRing {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      70% { transform: scale(1.35); opacity: 0; }
-      100% { transform: scale(1.35); opacity: 0; }
-    }
-
-    @keyframes whatsappIconBounce {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      45% { transform: translateY(-3px) rotate(-5deg); }
-      70% { transform: translateY(1px) rotate(4deg); }
-    }
-
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.92);
-      z-index: 5000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: min(100%, 980px);
-      max-height: 88vh;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(34px) scale(0.98);
-      transition: opacity 0.75s ease, transform 0.75s cubic-bezier(.2,.8,.2,1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .mobile-toggle {
-      display: none;
-      background: transparent;
-      color: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 9px 12px;
-      font-size: 20px;
-    }
-
-    @media (max-width: 960px) {
-      .hero-grid,
-      .about-box,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      .grid,
-      .pricing-grid,
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .design-prices {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .section-head {
-        align-items: start;
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .container {
-        width: min(100% - 28px, 1120px);
-      }
-
-      .nav {
-        height: auto;
-        padding: 14px 0;
-      }
-
-      nav {
-        position: fixed;
-        top: 68px;
-        left: 14px;
-        right: 14px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        background: #090909;
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        overflow: hidden;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 15px 18px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .mobile-toggle {
-        display: inline-flex;
-      }
-
-      .nav .btn {
-        display: none;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 64px 0;
-      }
-
-      .stats,
-      .grid,
-      .pricing-grid,
-      .process-grid,
-      .portfolio-grid,
-      .design-prices {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-item {
-        aspect-ratio: 16 / 11;
-      }
-
-      section {
-        padding: 64px 0;
-      }
-
-      .about-box,
-      .cta,
-      .contact-info,
-      form {
-        padding: 24px;
-        border-radius: 24px;
-      }
-
-      .hero-card {
-        padding: 18px;
-      }
-    }
-  </style></head>
 <body>
-  <div class="loader" id="loader">
-    <div class="premium-loader">
-      <div class="loader-logo-wrap">
-        <img src="https://i.imgur.com/WT5KP8t.png" alt="Spibody Digitalz Hub logo" class="loader-logo">
-        <span class="loader-ring"></span>
-      </div>
-      <h2>SPIBODY DIGITALZ HUB</h2>
-      <p>Crafting premium digital experiences...</p>
-      <div class="loader-bar"><span></span></div>
+  <!-- PREMIUM LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-box">
+    <div class="loader-logo-wrap">
+      <img src="https://i.imgur.com/WT5KP8t.png" alt="Spibody Digitalz Hub Logo">
+      <span></span>
     </div>
-  </div>  <div class="bg-orb orb-one"></div>
-  <div class="bg-orb orb-two"></div>
-  <div class="bg-orb orb-three"></div>  <header>
-    <div class="container nav">
-      <a href="#home" class="logo" aria-label="Spibody Digitalz Hub home">
-        <img src="https://i.imgur.com/WT5KP8t.png" alt="Spibody Digitalz Hub logo" class="logo-img" width="44" height="44" decoding="async" fetchpriority="high">
-        <span>SPIBODY DIGITALZ</span>
-      </a><nav id="navMenu" aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <a href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub%2C%20I%20want%20to%20start%20a%20project" class="btn">Start Project</a>
-  <button class="mobile-toggle" id="menuBtn" aria-label="Open menu">☰</button>
+    <h2>SPIBODY DIGITALZ HUB</h2>
+    <p>Building premium digital experiences...</p>
+
+    <div class="loader-progress">
+      <div></div>
+    </div>
+  </div>
 </div>
 
-  </header>  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <div class="eyebrow">Web Developer • Graphic Designer • Brand Builder</div>
-          <h1>Premium websites and designs that make your brand <span>stand out.</span></h1>
-          <p>Spibody Digitalz Hub helps businesses, creators, and startups look professional online with clean websites, powerful branding, and eye-catching visuals.</p><div class="hero-actions">
-        <a href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub%2C%20I%20need%20a%20website%20or%20design" class="btn">Chat on WhatsApp</a>
-        <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-      </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <img src="https://i.imgur.com/WT5KP8t.png" alt="Spibody Digitalz Hub Logo">
+        <span>SPIBODY DIGITALZ</span>
+      </a>
 
-      <div class="stats">
-        <div class="stat">
-          <strong>4+</strong>
-          <span>Creative services</span>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Creative Portfolio</a>
+        <a href="about.html">Hire Me</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content reveal">
+        <span class="eyebrow">Premium Digital Agency</span>
+
+        <h1>
+          We build digital brands that
+          <span class="gradient-text">attract customers.</span>
+        </h1>
+
+        <p>
+          Spibody Digitalz Hub helps businesses grow with premium websites,
+          creative branding, graphics, and digital solutions built to make your
+          business stand out online.
+        </p>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="btn">Start a Project</a>
+          <a href="portfolio.html" class="btn btn-outline">View Portfolio</a>
         </div>
-        <div class="stat">
-          <strong>100%</strong>
-          <span>Mobile responsive</span>
+
+        <div class="trust-list">
+          <span>Mobile Responsive</span>
+          <span>Premium Design</span>
+          <span>Business Focused</span>
+          <span>Fast Delivery</span>
         </div>
-        <div class="stat">
-          <strong>24/7</strong>
-          <span>Online presence</span>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="browser-card">
+          <div class="browser-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="browser-body">
+            <div class="mock-title"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line short"></div>
+
+            <div class="mock-grid">
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+              <div class="mock-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2>Creative and digital solutions for business growth.</h2>
+        <p>
+          We help brands look professional, build trust, and communicate clearly
+          with websites, graphics, branding, and digital content.
+        </p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="icon">🌐</div>
+          <h3>Website Design</h3>
+          <p>
+            Modern, responsive websites designed to convert visitors into clients.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>
+            Flyers, posters, banners, and visuals that make your brand stand out.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">💎</div>
+          <h3>Branding</h3>
+          <p>
+            Professional brand identity that helps your business look trusted.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">📱</div>
+          <h3>Social Media</h3>
+          <p>
+            Clean content designs for WhatsApp, Facebook, Instagram, and ads.
+          </p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-card reveal">
-      <div class="hero-card-inner">
-        <div class="eyebrow">Why clients choose us</div>
-        <h3>Design that looks clean, modern, and business-ready.</h3>
-        <p style="color: var(--muted);">From idea to launch, we help you create a brand presence that builds trust and converts visitors into customers.</p>
-        <ul class="check-list">
-          <li>Modern responsive websites</li>
-          <li>Professional logos, flyers, and posters</li>
-          <li>Social media graphics and branding kits</li>
-          <li>Fast delivery with clear communication</li>
-        </ul>
+  <!-- PORTFOLIO PREVIEW -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Creative Portfolio</span>
+        <h2>Selected designs from our creative direction.</h2>
+        <p>
+          A preview of our recent work across flyers, branding, posters, and
+          digital graphics.
+        </p>
+      </div>
+
+      <div class="portfolio-grid reveal">
+        <div class="portfolio-item">
+          <img src="https://i.imgur.com/6n6x54x.jpeg" alt="Portfolio sample 1" loading="lazy">
+          <span>Brand Design</span>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://i.imgur.com/iRKwtIQ.jpeg" alt="Portfolio sample 2" loading="lazy">
+          <span>Flyer Design</span>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://i.imgur.com/NtIRVTD.jpeg" alt="Portfolio sample 3" loading="lazy">
+          <span>Poster Design</span>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://i.imgur.com/XVSwp7n.jpeg" alt="Portfolio sample 4" loading="lazy">
+          <span>Social Media Design</span>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:34px;">
+        <a href="portfolio.html" class="btn btn-outline">See Full Portfolio</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about">
-  <div class="container about-box reveal">
-    <div class="profile-card">
-      <div class="avatar">SN</div>
-      <h3>Nignatoni N. Nathaniel</h3>
-      <p>Founder, Web Developer & Graphic Designer at Spibody Digitalz Hub.</p>
-      <div class="skill-tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Brand Design</span>
-        <span class="tag">Social Media Design</span>
+  <!-- WHY CHOOSE US -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why Choose Spibody</span>
+        <h2>We design with your business goals in mind.</h2>
+        <p>
+          Every project is built to help your brand look better, communicate
+          clearly, and attract the right audience.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon">🚀</div>
+          <h3>Built for Growth</h3>
+          <p>
+            We focus on designs that help your business attract attention and get results.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">⚡</div>
+          <h3>Clean & Fast</h3>
+          <p>
+            Our websites are responsive, clean, and easy for customers to use.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🤝</div>
+          <h3>Reliable Support</h3>
+          <p>
+            We guide you through the process and support you even after delivery.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="about-content">
-      <div class="eyebrow">About Spibody Digitalz Hub</div>
-      <h2>We build digital experiences that help brands look trusted, premium, and ready for business.</h2>
-      <p>We do more than make designs look beautiful. We create websites and visual identities that communicate clearly, attract the right audience, and help businesses grow online and offline.</p>
-    </div>
-  </div>
-</section>
+  <!-- ABOUT PREVIEW -->
+  <section>
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <span class="eyebrow">About The Founder</span>
+          <h2 style="text-align:left; margin-bottom:16px;">
+            I help businesses turn ideas into powerful digital experiences.
+          </h2>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Our Services</div>
-        <h2>Creative solutions for your business growth.</h2>
-      </div>
-      <p>Choose one service or combine multiple services for a complete brand presence.</p>
-    </div>
+          <p>
+            I’m <strong>Nignatoni N. Nathaniel</strong>, founder of Spibody
+            Digitalz Hub, a web developer and graphic designer focused on helping
+            businesses build a strong online presence.
+          </p>
 
-    <div class="grid">
-      <div class="card reveal">
-        <div class="icon">🎨</div>
-        <h3>Graphic Design</h3>
-        <p>Professional designs for online and print marketing.</p>
-        <ul>
-          <li>Logo design</li>
-          <li>Flyers and posters</li>
-          <li>Social media graphics</li>
-        </ul>
-      </div>
+          <a href="about.html" class="btn">Hire Me</a>
+        </div>
 
-      <div class="card reveal">
-        <div class="icon">🌐</div>
-        <h3>Website Design</h3>
-        <p>Clean websites that work beautifully on phones, tablets, and computers.</p>
-        <ul>
-          <li>Business websites</li>
-          <li>Portfolio websites</li>
-          <li>Landing pages</li>
-        </ul>
-      </div>
+        <div class="card reveal">
+          <span class="eyebrow">Our Promise</span>
+          <h3>Premium look. Clear message. Strong online presence.</h3>
+          <p>
+            We don’t just create websites and graphics. We help your brand look
+            serious, trusted, and ready for business.
+          </p>
 
-      <div class="card reveal">
-        <div class="icon">📱</div>
-        <h3>Social Media Branding</h3>
-        <p>Consistent visuals that make your brand recognizable online.</p>
-        <ul>
-          <li>Page setup</li>
-          <li>Post templates</li>
-          <li>Promotional creatives</li>
-        </ul>
-      </div>
-
-      <div class="card reveal">
-        <div class="icon">🎬</div>
-        <h3>Video Editing</h3>
-        <p>Short-form edits that help you promote your brand and engage viewers.</p>
-        <ul>
-          <li>Reels</li>
-          <li>Promo videos</li>
-          <li>Advertisements</li>
-        </ul>
+          <div class="trust-list" style="margin-top:22px;">
+            <span>Websites</span>
+            <span>Branding</span>
+            <span>Graphics</span>
+            <span>Digital Growth</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Selected Work</div>
-        <h2>Portfolio samples that show our creative direction.</h2>
-      </div>
-      <p>Click any image to preview it. Replace these links anytime with your newest and strongest client work.</p>
-    </div>
+  <!-- FINAL CTA -->
+  <section>
+    <div class="container">
+      <div class="cta reveal">
+        <span class="eyebrow">Start Today</span>
+        <h2>Ready to build something powerful?</h2>
+        <p>
+          Let’s create a website, brand, or design that makes your business look
+          premium and attract customers.
+        </p>
 
-    <div class="portfolio-grid reveal">
-      <div class="portfolio-item"><img src="https://i.imgur.com/6n6x54x.jpeg" alt="Spibody Digitalz portfolio sample 1" loading="lazy" decoding="async"><span>Brand Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/iRKwtIQ.jpeg" alt="Spibody Digitalz portfolio sample 2" loading="lazy" decoding="async"><span>Flyer Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/NtIRVTD.jpeg" alt="Spibody Digitalz portfolio sample 3" loading="lazy" decoding="async"><span>Poster Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/XVSwp7n.jpeg" alt="Spibody Digitalz portfolio sample 4" loading="lazy" decoding="async"><span>Social Media</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/nVH16av.jpeg" alt="Spibody Digitalz portfolio sample 5" loading="lazy" decoding="async"><span>Creative Work</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/l8UDYHV.jpeg" alt="Spibody Digitalz portfolio sample 6" loading="lazy" decoding="async"><span>Client Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/TUPYGXu.png" alt="Spibody Digitalz portfolio sample 7" loading="lazy" decoding="async"><span>Brand Identity</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/LpmeDyP.png" alt="Spibody Digitalz portfolio sample 8" loading="lazy" decoding="async"><span>Digital Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/igZi6Bf.png" alt="Spibody Digitalz portfolio sample 9" loading="lazy" decoding="async"><span>Promo Design</span></div>
-      <div class="portfolio-item"><img src="https://i.imgur.com/ifp7OJ7.jpeg" alt="Spibody Digitalz portfolio sample 10" loading="lazy" decoding="async"><span>Marketing Design</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Pricing</div>
-        <h2>Simple packages for different business needs.</h2>
-      </div>
-      <p>Prices may change depending on project size, features, content, and urgency.</p>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card featured reveal">
-        <span class="badge">Popular</span>
-        <h3>Business Website</h3>
-        <div class="price">1300 GHC</div>
-        <p style="color: var(--muted);">A professional site for businesses that need a trusted online presence.</p>
-        <ul class="check-list">
-          <li>Responsive website</li>
-          <li>Fast loading pages</li>
-          <li>Contact form</li>
-          <li>Basic SEO setup</li>
-        </ul>
-      </div>
-
-      <div class="price-card reveal">
-        <h3>Portfolio Website</h3>
-        <div class="price">900 GHC</div>
-        <p style="color: var(--muted);">Perfect for creatives, students, freelancers, and personal brands.</p>
-        <ul class="check-list">
-          <li>Personal branding layout</li>
-          <li>Project showcase</li>
-          <li>About and contact sections</li>
-          <li>Mobile optimized</li>
-        </ul>
-      </div>
-
-      <div class="price-card reveal">
-        <h3>E-commerce Website</h3>
-        <div class="price">1500 GHC <small>from</small></div>
-        <p style="color: var(--muted);">For selling products and accepting customer orders online.</p>
-        <ul class="check-list">
-          <li>Store setup</li>
-          <li>Product pages</li>
-          <li>Payment integration</li>
-          <li>Mobile friendly</li>
-        </ul>
+        <a href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub%2C%20I%20want%20to%20start%20a%20project" class="btn">
+          Chat on WhatsApp
+        </a>
       </div>
     </div>
+  </section>
 
-    <div class="design-prices reveal">
-      <div class="mini-price">Logo Design<strong>80 GHC</strong></div>
-      <div class="mini-price">Flyer Design<strong>50 GHC</strong></div>
-      <div class="mini-price">Poster Design<strong>30 GHC</strong></div>
-      <div class="mini-price">Invitation Card<strong>30 GHC</strong></div>
-      <div class="mini-price">Branding Package<strong>200 GHC</strong></div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      © 2026 Spibody Digitalz Hub. Building brands. Growing businesses.
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="process">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Our Process</div>
-        <h2>How we take your idea from concept to launch.</h2>
-      </div>
-    </div>
+  <!-- WHATSAPP FLOAT -->
+  <a
+    href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C9.373 3 4 8.014 4 14.2c0 2.437.85 4.692 2.292 6.527L5 29l8.43-2.193A12.47 12.47 0 0 0 16 27.4c6.627 0 12-5.014 12-11.2C28 8.014 22.627 3 16 3Zm0 21.4c-1.987 0-3.884-.51-5.53-1.42l-.396-.22-4.998 1.3 1.335-4.66-.258-.384C5.24 17.55 4.8 15.92 4.8 14.2 4.8 9.36 9.59 5.4 16 5.4s11.2 3.96 11.2 8.8-4.79 8.8-11.2 8.8Zm6.27-6.48c-.34-.17-2.01-.99-2.32-1.1-.31-.11-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.26-.74.09-.34-.17-1.45-.53-2.76-1.7-1.02-.91-1.71-2.03-1.91-2.37-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.05-2.54-.27-.65-.55-.56-.77-.57h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.69 1.23 3.32 1.4 3.55.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.56.22 2.15.13.66-.1 2.01-.82 2.3-1.61.29-.79.29-1.47.2-1.61-.09-.14-.31-.23-.65-.4Z"/>
+    </svg>
+  </a>
 
-    <div class="process-grid">
-      <div class="process-card reveal">
-        <h3>Discovery</h3>
-        <p>We understand your business, audience, goals, and preferred style.</p>
-      </div>
-      <div class="process-card reveal">
-        <h3>Design</h3>
-        <p>We create the visual direction, layout, and user experience.</p>
-      </div>
-      <div class="process-card reveal">
-        <h3>Build</h3>
-        <p>We develop the website or finalize your design assets professionally.</p>
-      </div>
-      <div class="process-card reveal">
-        <h3>Launch</h3>
-        <p>We deliver, revise where needed, and help you go live confidently.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="cta reveal">
-      <h2>Ready to build something amazing?</h2>
-      <p>Let’s create a website, brand identity, or design package that makes your business look premium and professional.</p>
-      <a href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub%2C%20I%20am%20ready%20to%20start%20a%20project" class="btn">Start Now on WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Contact</div>
-        <h2>Tell us what you want to create.</h2>
-      </div>
-      <p>Send your message and we will respond as soon as possible.</p>
-    </div>
-
-    <div class="contact-box">
-      <div class="contact-info reveal">
-        <h3>Let’s work together</h3>
-        <p>Need a website, logo, flyer, poster, social media design, or video edit? Reach out today.</p>
-        <a class="contact-line" href="https://wa.me/233257210750">WhatsApp: 025 721 0750</a>
-        <a class="contact-line" href="tel:+233257210750">Call: +233 25 721 0750</a>
-        <span class="contact-line">Ghana • Available online</span>
-      </div>
-
-      <form class="reveal" action="https://formspree.io/f/xnjonrlp" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <select name="service" required>
-          <option value="">Select a service</option>
-          <option>Website Design</option>
-          <option>Graphic Design</option>
-          <option>Social Media Branding</option>
-          <option>Video Editing</option>
-          <option>Other</option>
-        </select>
-        <textarea name="message" placeholder="Tell us about your project" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-  </main>  <footer>
-    <div class="container">© 2026 Spibody Digitalz Hub. Designed and built by Nignatoni N. Nathaniel.</div>
-  </footer><a href="https://wa.me/233257210750?text=Hello%20Spibody%20Digitalz%20Hub" class="whatsapp-float" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.373 3 4 8.014 4 14.2c0 2.437.85 4.692 2.292 6.527L5 29l8.43-2.193A12.47 12.47 0 0 0 16 27.4c6.627 0 12-5.014 12-11.2C28 8.014 22.627 3 16 3Zm0 21.4c-1.987 0-3.884-.51-5.53-1.42l-.396-.22-4.998 1.3 1.335-4.66-.258-.384C5.24 17.55 4.8 15.92 4.8 14.2 4.8 9.36 9.59 5.4 16 5.4s11.2 3.96 11.2 8.8-4.79 8.8-11.2 8.8Zm6.27-6.48c-.34-.17-2.01-.99-2.32-1.1-.31-.11-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.26-.74.09-.34-.17-1.45-.53-2.76-1.7-1.02-.91-1.71-2.03-1.91-2.37-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.05-2.54-.27-.65-.55-.56-.77-.57h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.69 1.23 3.32 1.4 3.55.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.56.22 2.15.13.66-.1 2.01-.82 2.3-1.61.29-.79.29-1.47.2-1.61-.09-.14-.31-.23-.65-.4Z"/></svg></a>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <img id="lightboxImg" src="" alt="Expanded portfolio preview">
-  </div>  <script>
-    const loader = document.getElementById('loader');
-    const menuBtn = document.getElementById('menuBtn');
-    const navMenu = document.getElementById('navMenu');
-    const reveals = document.querySelectorAll('.reveal');
-    const portfolioItems = document.querySelectorAll('.portfolio-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-
-    function revealOnScroll() {
-      reveals.forEach(item => item.classList.add('active'));
-    }
-
-    function hideLoader() {
-      if (!loader) return;
-      loader.classList.add('hidden');
-      revealOnScroll();
-    }
-
-    // Premium smart loader: minimum display time, but never gets stuck.
-    const minimumLoaderTime = 1700;
-    const maximumLoaderTime = 3500;
-    const startTime = Date.now();
-    let loaderIsHidden = false;
-
-    function safelyHideLoader() {
-      if (loaderIsHidden) return;
-      loaderIsHidden = true;
-
-      const elapsed = Date.now() - startTime;
-      const delay = Math.max(0, minimumLoaderTime - elapsed);
-
-      setTimeout(hideLoader, delay);
-    }
-
-    window.addEventListener('load', safelyHideLoader);
-    setTimeout(safelyHideLoader, maximumLoaderTime);
-
-    if (menuBtn && navMenu) {
-      menuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navMenu.classList.remove('active'));
-      });
-    }
-
-    if ('IntersectionObserver' in window) {
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      reveals.forEach(item => revealObserver.observe(item));
-    } else {
-      revealOnScroll();
-    }
-
-    if (lightbox && lightboxImg) {
-      portfolioItems.forEach(img => {
-        img.addEventListener('click', () => {
-          lightbox.classList.add('active');
-          lightbox.setAttribute('aria-hidden', 'false');
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt;
-        });
-      });
-
-      lightbox.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightboxImg.src = '';
-      });
-    }
-
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && lightbox) {
-        lightbox.classList.remove('active');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightboxImg.src = '';
-      }
-    });
-  </script></body>
-          </html>
+  <script src="script.js"></script>
+</body>
+</html>
