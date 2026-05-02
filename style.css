@@ -934,3 +934,83 @@ textarea {
     transform: translateX(135%);
   }
 }
+.project-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.project-card img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 26px;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+/* THEME TOGGLE */
+.theme-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 140, 26, 0.5);
+}
+
+/* LIGHT THEME */
+body.light-theme {
+  --bg-main: #f7f4ff;
+  --bg-soft: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --white: #12051f;
+  --muted: #5f5670;
+  --border: rgba(20, 5, 40, 0.12);
+
+  background:
+    radial-gradient(circle at top left, rgba(123, 44, 255, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 140, 26, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.09), transparent 32%),
+    var(--bg-main);
+}
+
+body.light-theme .header {
+  background: rgba(247, 244, 255, 0.85);
+}
+
+body.light-theme .browser-card,
+body.light-theme .form-box {
+  background: rgba(255,255,255,0.8);
+}
+
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+  background: rgba(255,255,255,0.8);
+  color: #12051f;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

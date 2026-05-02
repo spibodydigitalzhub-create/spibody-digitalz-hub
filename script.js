@@ -45,3 +45,26 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+// Theme Toggle
+const themeBtn = document.getElementById("themeBtn");
+
+if (themeBtn) {
+  const savedTheme = localStorage.getItem("spibodyTheme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+    themeBtn.textContent = "☀️";
+  }
+
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    if (document.body.classList.contains("light-theme")) {
+      localStorage.setItem("spibodyTheme", "light");
+      themeBtn.textContent = "☀️";
+    } else {
+      localStorage.setItem("spibodyTheme", "dark");
+      themeBtn.textContent = "🌙";
+    }
+  });
+}
