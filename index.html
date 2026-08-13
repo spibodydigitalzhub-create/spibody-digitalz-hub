@@ -1,999 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Open Graph for Social Sharing -->
-<meta property="og:title" content="Spibody Digitalz Hub | Enterprise Web Solutions">
-<meta property="og:description" content="Premium web development agency specializing in enterprise websites, DNS configuration, and digital portfolios for international clients across Ghana, Kazakhstan, USA, and Netherlands.">
-<meta property="og:image" content="https://spibody.online/og-image.jpg"> <!-- Create a 1200x630px banner -->
-<meta property="og:url" content="https://spibody.online/">
-<meta property="og:type" content="website">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spibody Digitalz Hub — Web Development &amp; Digital Infrastructure in Ghana</title>
+<meta name="description" content="Spibody Digitalz Hub builds custom websites, e-commerce stores, and digital infrastructure (DNS, email, SEO) for businesses in Ghana and worldwide. Based in Bimbila. Get a free project quote.">
+<link rel="canonical" href="https://spibody.online/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A1622">
 
-<!-- Twitter Card -->
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spibody Digitalz Hub — Web Development &amp; Digital Infrastructure">
+<meta property="og:description" content="Custom websites, e-commerce, DNS, email hosting and SEO for businesses in Ghana and worldwide. Based in Bimbila, built for anywhere.">
+<meta property="og:url" content="https://spibody.online/">
+<meta property="og:site_name" content="Spibody Digitalz Hub">
+<meta property="og:locale" content="en_GH">
+<meta property="og:image" content="https://spibody.online/og-image.jpg">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spibody Digitalz Hub | Enterprise Web Solutions">
-<meta name="twitter:description" content="Premium web development agency for global brands. Custom code, DNS infrastructure, SEO optimization.">
+<meta name="twitter:title" content="Spibody Digitalz Hub — Web Development &amp; Digital Infrastructure">
+<meta name="twitter:description" content="Custom websites, e-commerce, DNS, email hosting and SEO for businesses in Ghana and worldwide.">
 <meta name="twitter:image" content="https://spibody.online/og-image.jpg">
 
-<!-- Canonical URL (Prevents Duplicate Content) -->
-<link rel="canonical" href="https://spibody.online/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spibody Digitalz Hub | Enterprise Web Solutions</title>
-    <meta name="description" content="Premium web development agency specializing in enterprise websites, DNS configuration, and digital portfolios for international clients.">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #3b82f6;
-            --gold: #d4af37;
-            --light: #f8fafc;
-            --text: #334155;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--light); overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary); }
-        html { scroll-behavior: smooth; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-        /* --- HEADER STYLES --- */
-        .agency-header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1.2rem 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 1px solid transparent;
-        }
-        .agency-header.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            padding: 0.8rem 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }        .logo-link {
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-            transition: opacity 0.3s ease;
-        }
-        .logo-link:hover { opacity: 0.8; }
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links a:not(.cta-btn-nav) {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.95rem;
-            position: relative;
-            padding-bottom: 5px;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:not(.cta-btn-nav)::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--accent);
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .nav-links a:not(.cta-btn-nav):hover::after { width: 100%; }
-        .nav-links a:not(.cta-btn-nav):hover { color: var(--accent); }
-        .cta-btn-nav {
-            background: var(--accent);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            display: inline-block;
-        }
-        .cta-btn-nav:hover {
-            background: var(--primary);
-            transform: translateY(-2px);            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            padding: 5px;
-            z-index: 1001;
-        }
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 2px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-origin: center;
-        }
-        .mobile-menu-btn.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .mobile-menu-btn.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.3s;
-            z-index: 998;
-        }
-        .menu-overlay.active { opacity: 1; visibility: visible; }
-
-        @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-down { animation: fadeDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-        .animate-fade-up { opacity: 0; animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;                background: white;
-                flex-direction: column;
-                justify-content: center;
-                padding: 2rem;
-                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
-                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 999;
-            }
-            .nav-links.active { right: 0; }
-            .mobile-menu-btn { display: flex; }
-        }
-
-        /* --- HERO SECTION WITH IMAGE --- */
-        .hero { 
-            position: relative;
-            padding: 10rem 5% 8rem; 
-            text-align: center; 
-            color: white;
-            overflow: hidden;
-        }
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-            filter: brightness(0.3);
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(15,23,42,0.7), rgba(15,23,42,0.9));
-            z-index: -1;
-        }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; color: white; }
-        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2.5rem; color: #cbd5e1; }
-        .hero-badges { display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; flex-wrap: wrap; }
-        .badge { background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); color: white; }
-        .cta-btn { background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; }
-        .cta-btn:hover { background: var(--primary); transform: translateY(-2px); }
-
-        /* --- SERVICES GRID --- */
-        .services { padding: 6rem 5%; background: white; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 4rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }        .card { padding: 2.5rem; border-radius: 12px; background: var(--light); border: 1px solid #e2e8f0; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-color: var(--accent); }
-        .card h3 { margin-bottom: 1rem; font-size: 1.5rem; }
-        .card-icon { width: 50px; height: 50px; background: var(--accent); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
-
-        /* --- PORTFOLIO WITH IMAGES --- */
-        .portfolio { padding: 6rem 5%; background: var(--primary); color: white; }
-        .portfolio h2 { color: white; }
-        .project-card { background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; transition: 0.3s; }
-        .project-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
-        .project-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .project-content { padding: 2rem; }
-        .project-card h3 { color: var(--gold); margin-bottom: 0.5rem; }
-        .project-card .location { font-size: 0.9rem; opacity: 0.7; margin-bottom: 1rem; display: block; }
-        .tech-stack { display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
-        .tech-tag { font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 4px; }
-
-        /* --- CONTACT / CTA --- */
-        .contact-section { 
-            padding: 6rem 5%; 
-            text-align: center; 
-            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            position: relative;
-            color: white;
-        }
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.9);
-            z-index: 0;
-        }
-        .contact-section > * { position: relative; z-index: 1; }
-        .whatsapp-cta-btn {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            white-space: nowrap;
-        }
-        .whatsapp-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); background: #20bd5a; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 999; transition: 0.3s; text-decoration: none; }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        /* --- FOOTER --- */
-        footer { background-color: var(--primary); color: white; padding: 4rem 5% 2rem; }
-        
-        /* --- ANIMATION UTILITIES --- */
-        .reveal-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal-up.active { opacity: 1; transform: translateY(0); }
-        .reveal-scale { opacity: 0; transform: scale(0.95); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal-scale.active { opacity: 1; transform: scale(1); }
-        .stagger-container > * { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.5, 0, 0, 1); }
-        .stagger-container.active > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-        .stagger-container.active > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
-        .stagger-container.active > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
-        .stagger-container.active > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .btn-shine { position: relative; overflow: hidden; }
-        .btn-shine::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transform: skewX(-25deg); transition: 0.5s; }
-        .btn-shine:hover::after { left: 150%; transition: 0.7s; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .grid { grid-template-columns: 1fr; }
-            .whatsapp-cta-btn { width: 100%; max-width: 320px; padding: 1rem 1.5rem; font-size: 1rem; }
-        }
-    </style>
-  <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YOUR_MEASUREMENT_ID');
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Spibody Digitalz Hub",
+  "url": "https://spibody.online/",
+  "image": "https://spibody.online/og-image.jpg",
+  "telephone": "+233257210750",
+  "email": "info@spibody.online",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bimbila",
+    "addressRegion": "Northern Region",
+    "addressCountry": "GH"
+  },
+  "areaServed": ["Ghana", "Kazakhstan", "Netherlands", "United States"],
+  "sameAs": [],
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Web Development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"DNS & Domain Management"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Professional Email Hosting"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO Optimization"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Media Content Calendar Management"}}
+  ]
+}
 </script>
 
-<!-- Meta Pixel (For Retargeting Ads Later) -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<style>
+  :root{
+    --ink:#0A1622; --ink-soft:#122335; --paper:#ECE8DE; --paper-dim:#DFDACD;
+    --gold:#C9A227; --gold-soft:#E4C55E; --signal:#3FB77A;
+    --text-dark:#10202C; --text-mid:#4B5A63; --line:rgba(13,27,42,0.12);
+    --grid-line:rgba(228,197,94,0.07); --card:#F5F2E9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--text-dark);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);padding:10px 16px;z-index:200;font-weight:600;}
+  .skip-link:focus{left:12px;top:12px;}
+
+  .status-badge{position:fixed;top:18px;right:18px;z-index:100;display:flex;align-items:center;gap:8px;
+    background:rgba(10,22,34,0.9);color:var(--paper);padding:8px 14px;border-radius:20px;
+    font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;border:1px solid rgba(228,197,94,0.25);}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--signal);animation:ping 2s infinite;}
+  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(63,183,122,0.5);}70%{box-shadow:0 0 0 6px rgba(63,183,122,0);}100%{box-shadow:0 0 0 0 rgba(63,183,122,0);}}
+  @media(max-width:600px){.status-badge{display:none;}}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(236,232,222,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1120px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.05rem;}
+  .brand-mark{width:11px;height:11px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 3px rgba(63,183,122,0.18);}
+  .nav-links{display:flex;gap:28px;font-size:0.9rem;color:var(--text-mid);}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:2px;font-size:0.88rem;font-weight:500;}
+  .nav-cta:hover{background:var(--ink-soft);}
+  @media(max-width:900px){.nav-links{display:none;}}
+
+  .hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;padding:88px 0 0;
+    background-image:linear-gradient(var(--grid-line) 1px, transparent 1px),linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size:44px 44px;}
+  .hero-wrap{max-width:1120px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
+  .terminal{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--signal);background:rgba(0,0,0,0.25);
+    border:1px solid rgba(63,183,122,0.25);border-radius:4px;padding:14px 18px;max-width:460px;margin-bottom:34px;min-height:96px;}
+  .terminal .line{opacity:0;animation:appear 0.3s forwards;white-space:pre;}
+  .terminal .line.dim{color:rgba(236,232,222,0.5);}
+  @keyframes appear{to{opacity:1;}}
+  .cursor{display:inline-block;width:7px;height:13px;background:var(--signal);vertical-align:middle;animation:blink 1s step-end infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.9rem);font-weight:600;line-height:1.06;max-width:800px;margin-bottom:24px;opacity:0;animation:rise 0.6s ease forwards;animation-delay:1.6s;}
+  .hero h1 em{font-style:normal;color:var(--gold-soft);}
+  .hero p{font-size:1.1rem;color:rgba(236,232,222,0.7);max-width:540px;margin-bottom:36px;opacity:0;animation:rise 0.6s ease forwards;animation-delay:1.8s;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:56px;opacity:0;animation:rise 0.6s ease forwards;animation-delay:2s;}
+  @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){.terminal .line{opacity:1;animation:none;}.hero h1,.hero p,.hero-ctas{opacity:1;animation:none;}.status-dot,.cursor{animation:none;}}
+
+  .btn-primary{background:var(--gold);color:var(--ink);padding:14px 26px;border-radius:2px;font-weight:600;font-size:0.95rem;display:inline-block;}
+  .btn-primary:hover{background:var(--gold-soft);}
+  .btn-primary:disabled{opacity:0.4;cursor:not-allowed;}
+  .btn-ghost{border:1px solid rgba(236,232,222,0.3);padding:14px 26px;border-radius:2px;font-weight:500;font-size:0.95rem;color:var(--paper);display:inline-block;}
+  .btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft);}
+  .btn-dark-ghost{border:1px solid var(--line);padding:12px 22px;border-radius:2px;font-weight:500;font-size:0.9rem;color:var(--text-dark);}
+  .btn-dark-ghost:hover{border-color:var(--gold);color:var(--ink);}
+
+  .clock-strip{position:relative;z-index:2;border-top:1px solid rgba(236,232,222,0.12);display:grid;grid-template-columns:repeat(4,1fr);}
+  .clock-cell{padding:18px 20px;border-right:1px solid rgba(236,232,222,0.12);}
+  .clock-cell:last-child{border-right:none;}
+  .clock-cell .city{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;color:rgba(236,232,222,0.5);text-transform:uppercase;margin-bottom:6px;}
+  .clock-cell .time{font-family:'IBM Plex Mono',monospace;font-size:1.15rem;color:var(--gold-soft);font-weight:500;}
+  @media(max-width:700px){.clock-strip{grid-template-columns:repeat(2,1fr);}.clock-cell:nth-child(2){border-right:none;}.clock-cell:nth-child(3),.clock-cell:nth-child(4){border-top:1px solid rgba(236,232,222,0.12);}}
+
+  section{padding:88px 0;}
+  .section-head{max-width:620px;margin-bottom:52px;}
+  .section-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.76rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:600;color:var(--ink);}
+  .section-head p{color:var(--text-mid);margin-top:14px;font-size:1.02rem;}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .about-grid p{color:var(--text-mid);margin-bottom:16px;font-size:1.02rem;}
+  .stat-row{display:flex;gap:40px;margin-top:32px;flex-wrap:wrap;}
+  .stat{border-left:2px solid var(--gold);padding-left:14px;}
+  .stat .num{font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:700;color:var(--ink);}
+  .stat .label{font-size:0.82rem;color:var(--text-mid);margin-top:2px;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+
+  .services{background:var(--ink);color:var(--paper);}
+  .services .section-eyebrow{color:var(--gold-soft);}
+  .services .section-head h2{color:var(--paper);}
+  .services .section-head p{color:rgba(236,232,222,0.65);}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(236,232,222,0.14);border:1px solid rgba(236,232,222,0.14);}
+  .service-card{background:var(--ink);padding:34px 28px;}
+  .service-tag{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--gold-soft);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:18px;display:block;}
+  .service-card h3{font-size:1.15rem;font-weight:600;margin-bottom:10px;}
+  .service-card p{font-size:0.92rem;color:rgba(236,232,222,0.6);}
+  @media(max-width:900px){.service-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.service-grid{grid-template-columns:1fr;}}
+
+  /* STYLE GALLERY */
+  .style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .style-card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;}
+  .style-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(13,27,42,0.1);}
+  .mockup{aspect-ratio:4/3;background:#fff;position:relative;border-bottom:1px solid var(--line);overflow:hidden;}
+  .mockup .browser-dots{display:flex;gap:4px;padding:8px 10px;background:#EDEAE0;}
+  .mockup .browser-dots span{width:6px;height:6px;border-radius:50%;background:#C9C4B4;}
+  .mockup .mnav{height:14px;background:var(--ink);margin:0 10px 6px;border-radius:1px;}
+  .mockup .mhero{height:38%;margin:0 10px 6px;border-radius:1px;}
+  .mockup .mrow{display:flex;gap:6px;margin:0 10px;}
+  .mockup .mblock{flex:1;background:#E4E0D2;border-radius:1px;}
+  .style-corporate .mhero{background:linear-gradient(120deg,#0A1622,#1c3350);}
+  .style-corporate .mblock{height:26px;}
+  .style-ecom .mhero{background:linear-gradient(120deg,#C9A227,#E4C55E);}
+  .style-ecom .mrow .mblock{height:34px;}
+  .style-local .mhero{background:linear-gradient(120deg,#3FB77A,#7fd3a6);}
+  .style-local .mrow .mblock{height:20px;border-radius:50px;}
+  .style-card .info{padding:20px 20px 22px;}
+  .style-card .info .tag{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:0.06em;}
+  .style-card .info h3{font-size:1.05rem;margin:8px 0 8px;}
+  .style-card .info p{font-size:0.86rem;color:var(--text-mid);margin-bottom:16px;}
+  .style-select{font-size:0.82rem;font-weight:600;color:var(--ink);border-bottom:2px solid var(--gold);padding-bottom:2px;}
+  .style-select:hover{color:var(--gold);}
+  @media(max-width:900px){.style-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.style-grid{grid-template-columns:1fr;}}
+
+  /* QUOTE WIZARD */
+  .quote-section{background:var(--paper-dim);}
+  .wizard{background:var(--card);border:1px solid var(--line);border-radius:8px;max-width:720px;margin:0 auto;padding:40px;}
+  .wizard-progress{display:flex;gap:8px;margin-bottom:32px;}
+  .wizard-progress .dot{height:4px;flex:1;background:var(--line);border-radius:2px;overflow:hidden;}
+  .wizard-progress .dot span{display:block;height:100%;width:0;background:var(--gold);transition:width 0.3s;}
+  .wizard-progress .dot.done span{width:100%;}
+  .wizard-progress .dot.active span{width:100%;}
+  .wizard-step{display:none;}
+  .wizard-step.active{display:block;animation:fadein 0.3s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+  .wizard-step .step-label{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text-mid);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;}
+  .wizard-step h3{font-size:1.35rem;margin-bottom:22px;}
+  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px;}
+  .option-btn{text-align:left;border:1.5px solid var(--line);border-radius:6px;padding:16px;font-size:0.92rem;font-weight:500;background:#fff;transition:border-color 0.15s,background 0.15s;}
+  .option-btn:hover{border-color:var(--gold-soft);}
+  .option-btn.selected{border-color:var(--gold);background:rgba(201,162,39,0.08);}
+  .option-btn .opt-desc{display:block;font-weight:400;font-size:0.78rem;color:var(--text-mid);margin-top:4px;}
+  @media(max-width:560px){.option-grid{grid-template-columns:1fr;}}
+  .wizard-input{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;margin-bottom:14px;background:#fff;}
+  .wizard-input:focus{border-color:var(--gold);}
+  .wizard-nav{display:flex;justify-content:space-between;margin-top:28px;align-items:center;}
+  .wizard-summary{background:var(--ink);color:var(--paper);border-radius:6px;padding:24px;font-family:'IBM Plex Mono',monospace;font-size:0.85rem;line-height:1.9;margin-bottom:24px;}
+  .wizard-summary .sk{color:var(--gold-soft);}
+
+  /* PROCESS */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .process-step{position:relative;padding-top:44px;}
+  .process-step .pnum{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--gold);position:absolute;top:0;left:0;line-height:1;}
+  .process-step h3{font-size:1.05rem;margin-bottom:8px;}
+  .process-step p{font-size:0.88rem;color:var(--text-mid);}
+  @media(max-width:900px){.process-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.process-grid{grid-template-columns:1fr;}}
+
+  /* PRICING */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .price-card{border:1.5px solid var(--line);border-radius:8px;padding:32px 28px;background:var(--card);}
+  .price-card.featured{border-color:var(--gold);position:relative;}
+  .price-card.featured::before{content:"MOST CHOSEN";font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.06em;color:var(--ink);background:var(--gold);padding:4px 10px;border-radius:20px;position:absolute;top:-12px;left:28px;}
+  .price-card h3{font-size:1.1rem;margin-bottom:6px;}
+  .price-card .price{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;margin:14px 0 18px;}
+  .price-card .price span{font-size:0.85rem;font-weight:400;color:var(--text-mid);}
+  .price-card ul{list-style:none;margin-bottom:24px;}
+  .price-card li{font-size:0.86rem;color:var(--text-mid);padding:7px 0;border-top:1px solid var(--line);}
+  .price-card li:first-child{border-top:none;}
+  @media(max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+
+  .netmap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;}
+  .netmap svg{width:100%;height:auto;}
+  .netmap .route{fill:none;stroke:rgba(13,27,42,0.15);stroke-width:1.4;}
+  .netmap .route-active{fill:none;stroke:var(--gold);stroke-width:1.8;stroke-dasharray:5 5;animation:flow 20s linear infinite;opacity:0;transition:opacity 0.3s;}
+  .netmap .route-active.on{opacity:1;}
+  @keyframes flow{to{stroke-dashoffset:-500;}}
+  .net-node{cursor:pointer;}
+  .net-node circle.dot{fill:var(--text-mid);transition:fill 0.2s,r 0.2s;}
+  .net-node:hover circle.dot,.net-node.active circle.dot{fill:var(--gold);r:6;}
+  .net-node text{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:var(--text-mid);}
+  .net-node.active text{fill:var(--ink);font-weight:600;}
+  .readout{font-family:'IBM Plex Mono',monospace;background:var(--ink);color:var(--paper);border-radius:4px;padding:26px;min-height:220px;}
+  .readout .rd-label{font-size:0.68rem;color:var(--gold-soft);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;}
+  .readout h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;margin-bottom:10px;color:var(--paper);}
+  .readout p{font-size:0.85rem;color:rgba(236,232,222,0.65);line-height:1.7;}
+  .readout .rd-tags{margin-top:16px;font-size:0.72rem;color:var(--gold-soft);}
+  @media(max-width:760px){.netmap{grid-template-columns:1fr;}}
+
+  /* FAQ */
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{padding:20px 0;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";font-size:1.3rem;color:var(--gold);font-weight:400;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{padding-bottom:20px;color:var(--text-mid);font-size:0.95rem;max-width:640px;}
+
+  .cta{background:var(--paper-dim);text-align:center;padding:100px 28px;}
+  .cta h2{font-size:clamp(1.8rem,3.4vw,2.6rem);max-width:640px;margin:0 auto 22px;color:var(--ink);}
+  .cta p{color:var(--text-mid);max-width:480px;margin:0 auto 34px;}
+
+  footer{background:var(--ink);color:rgba(236,232,222,0.6);padding:56px 0 32px;font-size:0.88rem;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-grid h4{color:var(--paper);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;font-family:'IBM Plex Mono',monospace;}
+  .footer-grid ul{list-style:none;}
+  .footer-grid li{margin-bottom:8px;}
+  .footer-grid a:hover{color:var(--gold-soft);}
+  .footer-bottom{border-top:1px solid rgba(236,232,222,0.14);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;}
+  @media(max-width:700px){.footer-grid{grid-template-columns:1fr 1fr;}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="status-badge"><span class="status-dot"></span>ALL SYSTEMS OPERATIONAL</div>
 
-<!-- ANIMATED PROFESSIONAL HEADER -->
-<nav class="agency-header" id="mainHeader">
-    <div class="header-container">
-        <a href="#" class="logo-link animate-fade-down">
-            <span class="logo-text">Spibody Digitalz Hub</span>
-        </a>
-        <ul class="nav-links">
-            <li class="animate-fade-up" style="animation-delay: 0.1s"><a href="#services">Services</a></li>
-            <li class="animate-fade-up" style="animation-delay: 0.2s"><a href="#portfolio">Our Work</a></li>
-            <li class="animate-fade-up" style="animation-delay: 0.3s"><a href="#about">About</a></li>
-            <li class="animate-fade-up" style="animation-delay: 0.4s">
-                <a href="https://wa.me/233257210750" class="cta-btn-nav">Get a Quote</a>
-            </li>
+<header>
+  <nav aria-label="Primary">
+    <div class="brand"><span class="brand-mark"></span>Spibody Digitalz Hub</div>
+    <div class="nav-links">
+      <a href="#styles">Styles</a>
+      <a href="#quote">Get a Quote</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#work">Network</a>
+    </div>
+    <a class="nav-cta" href="https://wa.me/233257210750">Start a project</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-wrap">
+    <div class="terminal" id="terminal" aria-live="polite"></div>
+    <h1>We build the digital <em>infrastructure</em> that lets small teams operate like global ones.</h1>
+    <p>Web development, brand systems, and the unglamorous technical plumbing — DNS, email, SEO — done with the same precision whether the client is down the road or across an ocean.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#quote">Get a free project quote</a>
+      <a class="btn-ghost" href="#styles">Browse website styles</a>
+    </div>
+  </div>
+  <div class="clock-strip">
+    <div class="clock-cell"><div class="city">🇬🇭 Bimbila</div><div class="time" id="clock-gh">--:--:--</div></div>
+    <div class="clock-cell"><div class="city">🇰🇿 Almaty</div><div class="time" id="clock-kz">--:--:--</div></div>
+    <div class="clock-cell"><div class="city">🇳🇱 Rotterdam</div><div class="time" id="clock-nl">--:--:--</div></div>
+    <div class="clock-cell"><div class="city">🇺🇸 Houston</div><div class="time" id="clock-us">--:--:--</div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-eyebrow">Who we are</div>
+        <h2 style="font-size:2rem;font-weight:600;margin-bottom:20px;color:var(--ink);">Started in Bimbila. Built for anywhere.</h2>
+      </div>
+      <div>
+        <p>Spibody Digitalz Hub was founded on a simple premise: distance shouldn't determine quality. We've configured DNS for an energy company in Kazakhstan and built a WhatsApp checkout flow for a retailer a few streets from our office — both got the same attention to detail.</p>
+        <p>We work hands-on, in custom code rather than templated builders, because the businesses we serve need sites that hold up under real traffic and real scrutiny, not just look good in a screenshot.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="num">4+</div><div class="label">Countries served</div></div>
+          <div class="stat"><div class="num">100%</div><div class="label">Custom-coded builds</div></div>
+          <div class="stat"><div class="num">24/7</div><div class="label">Uptime monitoring</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">What we do</div>
+      <h2>Five ways we keep a business running online</h2>
+      <p>Each service solves a specific point of failure we've seen trip up growing businesses.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card"><span class="service-tag">Development</span><h3>Custom web development</h3><p>Hand-coded sites built for speed and search visibility — no bloated page-builder overhead.</p></div>
+      <div class="service-card"><span class="service-tag">Infrastructure</span><h3>DNS &amp; domain management</h3><p>Domain setup, DNS configuration, and SSL handled so your site stays reachable and secure.</p></div>
+      <div class="service-card"><span class="service-tag">Communication</span><h3>Professional email hosting</h3><p>Branded addresses like info@yourcompany.com, set up to build trust with every message sent.</p></div>
+      <div class="service-card"><span class="service-tag">Visibility</span><h3>SEO optimization</h3><p>Technical audits and fixes that help the right customers find you on Google.</p></div>
+      <div class="service-card"><span class="service-tag">New</span><h3>Social content calendars</h3><p>We plan and prep your month of posts; you approve with one tap and never go quiet online.</p></div>
+      <div class="service-card"><span class="service-tag">Support</span><h3>Ongoing maintenance</h3><p>A standing line to us for updates, fixes, and changes — no re-briefing a stranger each time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="styles">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Not sure what you need?</div>
+      <h2>Pick the style closest to your business</h2>
+      <p>Every site starts from one of these directions, then gets built around your brand. Select one to carry it into your quote below.</p>
+    </div>
+    <div class="style-grid">
+      <div class="style-card">
+        <div class="mockup style-corporate">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="mnav"></div><div class="mhero"></div>
+          <div class="mrow"><div class="mblock"></div><div class="mblock"></div><div class="mblock"></div></div>
+        </div>
+        <div class="info">
+          <div class="tag">Corporate / Industrial</div>
+          <h3>Trust &amp; credibility</h3>
+          <p>For B2B, manufacturing, or investor-facing brands. Clean structure, technical documentation, uptime front and center.</p>
+          <button class="style-select" data-style="Corporate / Industrial">Choose this style →</button>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="mockup style-ecom">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="mnav"></div><div class="mhero"></div>
+          <div class="mrow"><div class="mblock"></div><div class="mblock"></div><div class="mblock"></div></div>
+        </div>
+        <div class="info">
+          <div class="tag">E-commerce / Retail</div>
+          <h3>Built to sell</h3>
+          <p>Product grids, cart flow, and checkout — including WhatsApp-first ordering for local shoppers.</p>
+          <button class="style-select" data-style="E-commerce / Retail">Choose this style →</button>
+        </div>
+      </div>
+      <div class="style-card">
+        <div class="mockup style-local">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="mnav"></div><div class="mhero"></div>
+          <div class="mrow"><div class="mblock"></div><div class="mblock"></div><div class="mblock"></div></div>
+        </div>
+        <div class="info">
+          <div class="tag">Local &amp; Service Business</div>
+          <h3>Warm &amp; easy to book</h3>
+          <p>Salons, clinics, restaurants, contractors — booking, hours, and location front and center.</p>
+          <button class="style-select" data-style="Local & Service Business">Choose this style →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section" id="quote">
+  <div class="wrap">
+    <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <div class="section-eyebrow">Get a free project quote</div>
+      <h2>Tell us what you need. Get a scoped answer.</h2>
+      <p>Four quick questions — no account, no spam. We'll reply on WhatsApp with a plan and rough price.</p>
+    </div>
+
+    <div class="wizard">
+      <div class="wizard-progress" id="wizard-progress">
+        <div class="dot active" data-step="1"><span></span></div>
+        <div class="dot" data-step="2"><span></span></div>
+        <div class="dot" data-step="3"><span></span></div>
+        <div class="dot" data-step="4"><span></span></div>
+      </div>
+
+      <div class="wizard-step active" data-step="1">
+        <div class="step-label">Step 1 of 4</div>
+        <h3>What kind of business is this for?</h3>
+        <div class="option-grid" data-group="business">
+          <button class="option-btn" data-value="Corporate / Industrial">Corporate / Industrial<span class="opt-desc">B2B, manufacturing, investor-facing</span></button>
+          <button class="option-btn" data-value="E-commerce / Retail">E-commerce / Retail<span class="opt-desc">Selling products online</span></button>
+          <button class="option-btn" data-value="Local & Service Business">Local &amp; Service Business<span class="opt-desc">Salons, clinics, contractors, restaurants</span></button>
+          <button class="option-btn" data-value="Personal / Portfolio">Personal / Portfolio<span class="opt-desc">Individual, creative, freelancer</span></button>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="2">
+        <div class="step-label">Step 2 of 4</div>
+        <h3>What do you need built?</h3>
+        <div class="option-grid" data-group="need">
+          <button class="option-btn" data-value="Brand new website">Brand new website<span class="opt-desc">Starting from scratch</span></button>
+          <button class="option-btn" data-value="Redesign existing site">Redesign existing site<span class="opt-desc">Have a site, needs an upgrade</span></button>
+          <button class="option-btn" data-value="Online store / e-commerce">Online store / e-commerce<span class="opt-desc">Selling with a cart &amp; checkout</span></button>
+          <button class="option-btn" data-value="Full package (site + DNS + email + SEO)">Full package<span class="opt-desc">Site + DNS + email + SEO</span></button>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="3">
+        <div class="step-label">Step 3 of 4</div>
+        <h3>What's your timeline?</h3>
+        <div class="option-grid" data-group="timeline">
+          <button class="option-btn" data-value="ASAP (within 2 weeks)">ASAP<span class="opt-desc">Within 2 weeks</span></button>
+          <button class="option-btn" data-value="Within a month">Within a month</button>
+          <button class="option-btn" data-value="1-3 months">1–3 months</button>
+          <button class="option-btn" data-value="Just exploring for now">Just exploring for now</button>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="4">
+        <div class="step-label">Step 4 of 4</div>
+        <h3>Where should we send your quote?</h3>
+        <input class="wizard-input" id="q-name" type="text" placeholder="Your name" aria-label="Your name">
+        <input class="wizard-input" id="q-contact" type="text" placeholder="WhatsApp number or email" aria-label="WhatsApp number or email">
+        <div class="wizard-summary" id="wizard-summary"></div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-dark-ghost" id="wizard-back" style="visibility:hidden;">← Back</button>
+        <button class="btn-primary" id="wizard-next" disabled>Next →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">How we work</div>
+      <h2>From first message to live site</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step"><div class="pnum">01</div><h3>Discover</h3><p>We learn your business and what the site actually needs to do — not just look like.</p></div>
+      <div class="process-step"><div class="pnum">02</div><h3>Design</h3><p>A visual direction built for your brand, reviewed with you before a line of code is written.</p></div>
+      <div class="process-step"><div class="pnum">03</div><h3>Build</h3><p>Hand-coded, tested on real devices, connected to DNS, email, and analytics.</p></div>
+      <div class="process-step"><div class="pnum">04</div><h3>Launch &amp; support</h3><p>We go live together, then stay on for updates, fixes, and growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="quote-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Pricing</div>
+      <h2>Straightforward packages</h2>
+      <p>Every project is scoped individually — these are starting points, confirmed after your free quote.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">Get quote<span> · from small</span></div>
+        <ul>
+          <li>Up to 5 pages</li>
+          <li>Mobile-responsive design</li>
+          <li>Domain &amp; DNS setup</li>
+          <li>Basic SEO setup</li>
         </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
-            <span></span><span></span><span></span>
-        </button>
+        <a class="btn-dark-ghost" href="#quote">Start here →</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Growth</h3>
+        <div class="price">Get quote<span> · most common</span></div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>E-commerce or booking flow</li>
+          <li>Branded email hosting</li>
+          <li>Ongoing SEO &amp; maintenance</li>
+        </ul>
+        <a class="btn-dark-ghost" href="#quote">Start here →</a>
+      </div>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <div class="price">Get quote<span> · custom scope</span></div>
+        <ul>
+          <li>Multi-market / multi-language</li>
+          <li>Custom integrations</li>
+          <li>Dedicated infrastructure &amp; uptime monitoring</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn-dark-ghost" href="#quote">Start here →</a>
+      </div>
     </div>
-</nav>
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- Hero Section with Background Image --><section class="hero reveal-up">
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Global Network Technology" class="hero-bg" loading="eager">
-    <div class="hero-overlay"></div>
-    <h1>Enterprise-Grade Web Solutions<br>for Global Brands</h1>
-    <p>We build high-performance websites, configure professional email systems, and manage digital infrastructure for clients across Kazakhstan, USA, Netherlands, and Ghana.</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#portfolio" class="cta-btn btn-shine hover-lift">View Our Work</a>
-        <a href="https://wa.me/233257210750" class="cta-btn btn-shine hover-lift" style="background: transparent; color: white; border: 2px solid white;">WhatsApp Us</a>
-    </div>
-    <div class="hero-badges stagger-container">
-        <span class="badge">🇰🇿 Siberia Refinery</span>
-        <span class="badge">🇸 Maxwell Storage Tank</span>
-        <span class="badge">🇱 International Clients</span>
-        <span class="badge">⚡ 99.9% Uptime</span>
-    </div>
+  </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<section id="about" class="about-section reveal-up">
-    <div class="container about-container">
-        <!-- Text Content -->
-        <div class="about-content">
-            <h4 style="color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">Who We Are</h4>
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; line-height: 1.2;">
-                Bridging Global Standards<br>with Local Expertise
-            </h2>
-            <p style="color: #64748b; margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7;">
-                Founded in Juashei – Bimbila, Ghana, <strong>Spibody Digitalz Hub</strong> was built on a simple mission: to deliver world-class digital infrastructure without compromise. We don't just build websites; we engineer secure, high-performance digital ecosystems for businesses that demand excellence.
-            </p>
-            <p style="color: #64748b; margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.7;">
-                From configuring enterprise DNS for Kazakhstan's energy sector to building e-commerce platforms for Ghanaian retailers, we bring the same level of precision, security, and speed to every project. We are your technical partner for global growth.
-            </p>
-            
-            <!-- Key Stats / Trust Indicators -->
-            <div class="about-stats stagger-container">
-                <div class="stat-item">
-                    <span class="stat-number">4+</span>
-                    <span class="stat-label">Countries Served</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Custom Code</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Uptime Monitoring</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Visual/Image Side -->
-        <div class="about-visual reveal-scale">
-            <div class="image-frame">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Spibody Digitalz Team Collaboration" 
-                     loading="lazy">
-                <div class="experience-badge">
-                    <span class="badge-years">Global</span>
-                    <span class="badge-text">Reach</span>
-                </div>
-            </div>
-        </div>
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Live network</div>
+      <h2>Four countries, one desk in Bimbila</h2>
+      <p>Hover or tap a node to see what we built there.</p>
     </div>
-</section>
-
-<style>
-    /* About Section Styles */    .about-section {
-        padding: 8rem 5%;
-        background: white;
-        overflow: hidden;
-    }
-    
-    .about-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
-
-    .about-stats {
-        display: flex;
-        gap: 2rem;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid #e2e8f0;
-    }
-
-    .stat-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .stat-number {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--primary);
-        line-height: 1;
-        margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.85rem;
-        color: #64748b;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-    }
-
-    .about-visual {
-        position: relative;
-    }
-
-    .image-frame {        position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .image-frame img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.5s ease;
-    }
-
-    .image-frame:hover img {
-        transform: scale(1.05);
-    }
-
-    .experience-badge {
-        position: absolute;
-        bottom: -20px;
-        left: -20px;
-        background: var(--primary);
-        color: white;
-        padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.3);
-        text-align: center;
-        min-width: 120px;
-    }
-
-    .badge-years {
-        display: block;
-        font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--gold);
-        line-height: 1;
-    }
-
-    .badge-text {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        opacity: 0.9;
-    }
-
-    @media (max-width: 968px) {
-        .about-container {
-            grid-template-columns: 1fr;
-            gap: 3rem;        }
-        
-        .about-visual {
-            order: -1; /* Image first on mobile */
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        
-        .experience-badge {
-            bottom: -10px;
-            left: -10px;
-            padding: 1rem;
-        }
-    }
-</style>
-<!-- TESTIMONIALS SECTION -->
-<section id="testimonials" class="testimonials-section reveal-up">
-    <div class="container">
-        <h2 class="section-title">What Our Global Clients Say</h2>
-        
-        <div class="testimonial-slider-container">
-            <!-- Slider Track -->
-            <div class="testimonial-track" id="testimonialTrack">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-slide active">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">
-                        Spibody Digitalz Hub transformed our investor relations portal. Their DNS configuration reduced our site downtime to zero, and the custom CMS allows our team to update safety protocols instantly. Truly enterprise-grade work from Ghana.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Avatar" class="author-img">
-                        <div class="author-info">
-                            <h4>Alexei Volkov</h4>
-                            <span>IT Director, Siberia Refinery • Kazakhstan 🇰🇿</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-slide">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">
-                        We needed a B2B platform that could handle complex industrial catalogs across US and Dutch markets. The Zoho Mail integration and GitHub Pages hosting they set up was flawless. Professional, fast, and reliable.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Avatar" class="author-img">
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <span>Operations Manager, Maxwell Storage Tanks • USA/NL 🇺🇸🇳🇱</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-slide">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">
-                        The WhatsApp-first e-commerce system they built for ArthurmallGh increased our order conversion by 60%. They understand the Ghanaian market perfectly while delivering international quality standards.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Avatar" class="author-img">
-                        <div class="author-info">
-                            <h4>Kwame Asante</h4>
-                            <span>Founder, ArthurmallGh • Ghana 🇭</span>
-                        </div>                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation Controls -->
-            <button class="slider-btn prev-btn" aria-label="Previous testimonial">❮</button>
-            <button class="slider-btn next-btn" aria-label="Next testimonial">❯</button>
-            
-            <!-- Dots Indicator -->
-            <div class="slider-dots" id="sliderDots"></div>
-        </div>
+    <div class="netmap">
+      <svg viewBox="0 0 560 260" role="img" aria-label="Map of client locations connected to Bimbila, Ghana">
+        <path class="route" d="M 60 200 C 180 90, 300 220, 340 130" />
+        <path class="route" d="M 340 130 C 400 80, 440 60, 480 40" />
+        <path class="route" d="M 340 130 C 400 170, 440 190, 500 190" />
+        <path class="route-active" id="route-gh-kz" d="M 60 200 C 180 90, 300 220, 340 130" />
+        <path class="route-active" id="route-kz-nl" d="M 340 130 C 400 80, 440 60, 480 40" />
+        <path class="route-active" id="route-kz-us" d="M 340 130 C 400 170, 440 190, 500 190" />
+        <g class="net-node active" data-node="gh" tabindex="0"><circle class="dot" cx="60" cy="200" r="5"/><text x="42" y="222">BIMBILA</text></g>
+        <g class="net-node" data-node="kz" tabindex="0"><circle class="dot" cx="340" cy="130" r="5"/><text x="320" y="152">ALMATY</text></g>
+        <g class="net-node" data-node="nl" tabindex="0"><circle class="dot" cx="480" cy="40" r="5"/><text x="450" y="26">ROTTERDAM</text></g>
+        <g class="net-node" data-node="us" tabindex="0"><circle class="dot" cx="500" cy="190" r="5"/><text x="465" y="212">HOUSTON</text></g>
+      </svg>
+      <div class="readout" id="readout">
+        <div class="rd-label">Node // Bimbila, Ghana</div>
+        <h3>Home base</h3>
+        <p>Where the team works, and where every project — local or international — starts.</p>
+        <div class="rd-tags">HQ · Design · Development · Strategy</div>
+      </div>
     </div>
+  </div>
 </section>
 
-<style>
-    /* Testimonials Section Styles */
-    .testimonials-section {
-        padding: 6rem 5%;
-        background: var(--light);
-        overflow: hidden;
-    }
-
-    .testimonial-slider-container {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 0;
-    }
-
-    .testimonial-track {
-        position: relative;
-        min-height: 300px;
-    }
-
-    .testimonial-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: none;
-        background: white;
-        padding: 3rem;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-        border: 1px solid #e2e8f0;
-    }
-    .testimonial-slide.active {
-        opacity: 1;
-        transform: translateX(0);
-        pointer-events: all;
-        z-index: 2;
-    }
-
-    .quote-icon {
-        font-family: 'Playfair Display', serif;
-        font-size: 4rem;
-        color: var(--accent);
-        line-height: 1;
-        margin-bottom: 1rem;
-        opacity: 0.3;
-    }
-
-    .testimonial-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text);
-        margin-bottom: 2rem;
-        font-style: italic;
-    }
-
-    .testimonial-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .author-img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--gold);
-    }
-
-    .author-info h4 {
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 0.2rem;
-    }
-
-    .author-info span {
-        font-size: 0.85rem;
-        color: #64748b;
-    }
-    /* Slider Controls */
-    .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: white;
-        border: 1px solid #e2e8f0;
-        color: var(--primary);
-        font-size: 1.2rem;
-        cursor: pointer;
-        z-index: 10;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .slider-btn:hover {
-        background: var(--primary);
-        color: white;
-        border-color: var(--primary);
-        transform: translateY(-50%) scale(1.1);
-    }
-
-    .prev-btn { left: -60px; }
-    .next-btn { right: -60px; }
-
-    .slider-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 2rem;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #cbd5e1;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .dot.active {
-        background: var(--accent);        width: 30px;
-        border-radius: 5px;
-    }
-
-    @media (max-width: 768px) {
-        .testimonial-slide { padding: 2rem; }
-        .prev-btn { left: 0; }
-        .next-btn { right: 0; }
-        .testimonial-track { min-height: 350px; }
-    }
-</style>
-
-<script>
-    // Testimonial Slider Logic
-    document.addEventListener('DOMContentLoaded', () => {
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const dotsContainer = document.getElementById('sliderDots');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let currentSlide = 0;
-        let slideInterval;
-
-        // Create dots
-        slides.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(index));
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
-            
-            currentSlide = (index + slides.length) % slides.length;
-            
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
-        // Auto-play
-        function startAutoPlay() {
-            slideInterval = setInterval(nextSlide, 5000);
-        }
-
-        function stopAutoPlay() {
-            clearInterval(slideInterval);
-        }
-
-        // Event listeners
-        nextBtn.addEventListener('click', () => {
-            stopAutoPlay();
-            nextSlide();
-            startAutoPlay();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            stopAutoPlay();
-            prevSlide();
-            startAutoPlay();
-        });
-
-        // Pause on hover
-        const sliderContainer = document.querySelector('.testimonial-slider-container');
-        sliderContainer.addEventListener('mouseenter', stopAutoPlay);
-        sliderContainer.addEventListener('mouseleave', startAutoPlay);
-
-        // Start
-        startAutoPlay();
-    });
-</script>
-<!-- Services Section -->
-<section id="services" class="services">
-    <h2 class="section-title reveal-up">Our Expertise</h2>
-    <div class="grid stagger-container">
-        <div class="card hover-lift">
-            <div class="card-icon"></div>
-            <h3>Custom Web Development</h3>
-            <p>Hand-coded HTML/CSS websites optimized for speed and SEO. No bloated templates. Perfect for corporate portfolios and enterprise brands.</p>
-        </div>
-        <div class="card hover-lift">
-            <div class="card-icon">🌐</div>
-            <h3>DNS & Domain Management</h3>
-            <p>Professional domain setup, DNS configuration, and SSL implementation. We ensure your digital address is secure and reliable.</p>
-        </div>
-        <div class="card hover-lift">
-            <div class="card-icon">📧</div>
-            <h3>Professional Email Hosting</h3>
-            <p>Zoho Mail integration and setup. Get branded emails like info@yourcompany.com that build trust with international partners.</p>
-        </div>
-        <div class="card hover-lift">
-            <div class="card-icon">📈</div>
-            <h3>SEO Optimization</h3>
-            <p>Technical SEO audits and implementation to help your business rank higher on Google and attract organic traffic globally.</p>
-        </div>
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">FAQ</div>
+      <h2>Common questions</h2>
     </div>
-</section>
-
-<!-- Portfolio Section with Images -->
-<section id="portfolio" class="portfolio">
-    <h2 class="section-title reveal-up">Featured Projects</h2>
-    <div class="grid stagger-container">
-        <div class="project-card hover-lift reveal-scale">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siberia Refinery Industrial Site" class="project-img" loading="lazy">            <div class="project-content">
-                <h3>Siberia Refinery</h3>
-                <span class="location">🇰🇿 Kazakhstan • Industrial & Energy Sector</span>
-                <p>Corporate enterprise website for a major refinery. Focused on investor relations, safety protocols, and high-performance infrastructure.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Custom HTML/CSS</span>
-                    <span class="tech-tag">DNS Configuration</span>
-                    <span class="tech-tag">SEO Optimization</span>
-                </div>
-                <a href="https://www.siberiarefinery.com" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--gold); text-decoration:none; font-weight:600;">Visit Website →</a>
-            </div>
-        </div>
-        <div class="project-card hover-lift reveal-scale">
-            <img src="https://images.unsplash.com/photo-1565514020176-db792f4b6d46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maxwell Storage Tanks Manufacturing" class="project-img" loading="lazy">
-            <div class="project-content">
-                <h3>Maxwell Storage Tanks</h3>
-                <span class="location">🇺🇸 USA / 🇳🇱 Netherlands • B2B Manufacturing</span>
-                <p>International B2B platform connecting US and Dutch markets. Custom domain setup, professional email integration, and industrial catalog display.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Custom Development</span>
-                    <span class="tech-tag">Zoho Mail Setup</span>
-                    <span class="tech-tag">GitHub Pages Hosting</span>
-                </div>
-                <a href="https://www.maxwellstoragetanks.com" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--gold); text-decoration:none; font-weight:600;">Visit Website →</a>
-            </div>
-        </div>
-        <div class="project-card hover-lift reveal-scale">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ArthurmallGh E-commerce Platform" class="project-img" loading="lazy">
-            <div class="project-content">
-                <h3>ArthurmallGh</h3>
-                <span class="location">🇬🇭 Ghana • E-Commerce & Retail</span>
-                <p>WhatsApp-first direct order system optimized for the Ghanaian market. Features dynamic filtering, modal product views, and seamless checkout-to-WhatsApp flow.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">JavaScript (ES6+)</span>
-                    <span class="tech-tag">Meta Pixel Integration</span>
-                    <span class="tech-tag">LocalStorage Cart</span>
-                </div>
-                <a href="https://www.arthurmallgh.it.com" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--gold); text-decoration:none; font-weight:600;">Visit Website →</a>
-            </div>
-        </div>
-        <div class="project-card hover-lift reveal-scale">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emmanuel Digitalz Store Dashboard" class="project-img" loading="lazy">
-            <div class="project-content">
-                <h3>Emmanuel Digitalz Store</h3>
-                <span class="location">🇭 Ghana • Digital Products & Services</span>
-                <p>Digital retail platform for tech services and products. Built for speed, mobile responsiveness, and high-conversion user experience.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Responsive Design</span>
-                    <span class="tech-tag">UI/UX Optimization</span>
-                    <span class="tech-tag">Performance Tuning</span>                </div>
-                <a href="https://www.emmanueldigitalz.store" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--gold); text-decoration:none; font-weight:600;">Visit Website →</a>
-            </div>
-        </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>How long does a typical website take?</summary><p>A Starter site usually takes 1–2 weeks. E-commerce or multi-language builds run 3–6 weeks depending on scope, confirmed after your free quote.</p></details>
+      <details class="faq-item"><summary>Do you work with clients outside Ghana?</summary><p>Yes — we currently support clients in Ghana, Kazakhstan, the Netherlands, and the United States, and we're set up to work with any timezone.</p></details>
+      <details class="faq-item"><summary>Do you offer ongoing support after launch?</summary><p>Yes. Every package includes a maintenance option, so you have a direct line to us for updates rather than starting over with someone new each time.</p></details>
+      <details class="faq-item"><summary>Can you help even if I already have a website?</summary><p>Yes — redesigns are one of our most common projects. We can also just take over DNS, email, or SEO without rebuilding the whole site.</p></details>
     </div>
+  </div>
 </section>
 
-<!-- CONTACT / CTA SECTION with Background Image -->
-<section class="contact-section reveal-up">
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: white; margin-bottom: 1.5rem; line-height: 1.2;">
-        Ready to Scale<br>Your Digital Presence?
-    </h2>
-    <p style="max-width: 600px; margin: 0 auto 2.5rem; color: #cbd5e1; font-size: 1.1rem; line-height: 1.6;">
-        Join our roster of international clients. We deliver enterprise quality with personalized attention.
-    </p>
-    <a href="https://wa.me/233257210750" class="whatsapp-cta-btn btn-shine hover-lift">Start Project on WhatsApp</a>
-    <p style="margin-top: 2rem; font-size: 0.9rem; color: #94a3b8;">Based in Juashei – Bimbila, Serving Globally 🌍</p>
-</section>
+<div class="cta">
+  <h2>Ready to make your digital presence match the quality of your work?</h2>
+  <p>Tell us what you're building. We'll reply on WhatsApp, usually within the day.</p>
+  <a class="btn-primary" href="#quote">Get your free quote</a>
+</div>
 
-<a href="https://wa.me/233257210750?text=Hi%20Spibody%2C%20I'm%20interested%20in%20your%20enterprise%20web%20solutions.%20Can%20we%20discuss%20my%20project%3F" 
-   class="whatsapp-float hover-lift" target="_blank">💬</a>
+</main>
 
-<!-- FOOTER SECTION -->
 <footer>
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-            <div>
-                <h3 style="color: white; font-family: 'Playfair Display', serif; margin-bottom: 1rem; font-size: 1.5rem;">Spibody Digitalz Hub</h3>
-                <p style="opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem;">Enterprise-grade web solutions for global brands. Specializing in custom development, DNS infrastructure, and digital transformation across Ghana, Kazakhstan, USA, and Netherlands.</p>
-                <div style="display: flex; gap: 1rem;">
-                    <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s;">in</a>
-                    <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s;">X</a>
-                    <a href="https://wa.me/233257210750" style="width: 40px; height: 40px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s;">WA</a>
-                </div>
-            </div>
-            <div>
-                <h4 style="color: var(--gold); margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Our Services</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">Custom Web Development</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">DNS & Domain Management</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">Professional Email Hosting</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">SEO Optimization</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">GitHub Pages Deployment</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color: var(--gold); margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Featured Clients</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="https://www.siberiarefinery.com" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">Siberia Refinery (Kazakhstan)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="https://www.maxwellstoragetanks.com" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">Maxwell Storage Tanks (USA/NL)</a></li>                    <li style="margin-bottom: 0.8rem;"><a href="https://www.arthurmallgh.it.com" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">ArthurmallGh (Ghana)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="https://www.emmanueldigitalz.store" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s;">Emmanuel Digitalz Store</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color: var(--gold); margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Contact & Legal</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.8);">📍 Juashei – Bimbila, Ghana</li>
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.8);">📞 +233 257 210 750</li>
-                    <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.8);">✉️ info@spibody.online</li>
-                    <li style="margin-top: 1.5rem;"><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a></li>
-                    <li style="margin-top: 0.5rem;"><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <p style="opacity: 0.6; font-size: 0.9rem; margin: 0;">© <span id="currentYear"></span> Spibody Digitalz Hub. All rights reserved.</p>
-            <p style="opacity: 0.6; font-size: 0.9rem; margin: 0;">Built with precision. Deployed globally. </p>
-        </div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:var(--paper);margin-bottom:14px;"><span class="brand-mark"></span>Spibody Digitalz Hub</div>
+        <p style="max-width:320px;color:rgba(236,232,222,0.55);">Digital infrastructure and web development for businesses in Ghana and beyond. Built in Bimbila, deployed globally.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">DNS &amp; Domains</a></li>
+          <li><a href="#services">Email Hosting</a></li>
+          <li><a href="#services">SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#styles">Website Styles</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#work">Our Network</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Juashei – Bimbila, Ghana</li>
+          <li><a href="tel:+233257210750">+233 257 210 750</a></li>
+          <li><a href="mailto:info@spibody.online">info@spibody.online</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <span>© 2026 Spibody Digitalz Hub. All rights reserved.</span>
+      <span class="mono">Built with precision. Deployed globally.</span>
+    </div>
+  </div>
 </footer>
 
-<!-- CONSOLIDATED JAVASCRIPT -->
 <script>
-    // Set current year dynamically
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // 1. Scroll Animation Logic for Header
-    const header = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bootLines = [
+    {text:'$ connecting to network...', dim:false},
+    {text:'✓ route established: BIMBILA → GLOBAL', dim:false},
+    {text:'✓ dns resolved   ✓ ssl verified', dim:true},
+    {text:'✓ uptime 99.9%   status: operational', dim:true},
+  ];
+  const term = document.getElementById('terminal');
+  if(reduceMotion){
+    term.innerHTML = bootLines.map(l => `<div class="line ${l.dim?'dim':''}">${l.text}</div>`).join('');
+  } else {
+    let delay = 200;
+    bootLines.forEach((l)=>{
+      const div = document.createElement('div');
+      div.className = 'line' + (l.dim?' dim':'');
+      div.style.animationDelay = delay+'ms';
+      div.textContent = l.text;
+      term.appendChild(div);
+      delay += 380;
     });
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    term.appendChild(cursor);
+  }
 
-    // 2. Mobile Menu Logic
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    const overlay = document.getElementById('menuOverlay');
+  function updateClocks(){
+    const opts = {hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false};
+    try{
+      document.getElementById('clock-gh').textContent = new Intl.DateTimeFormat('en-GB',{...opts,timeZone:'Africa/Accra'}).format(new Date());
+      document.getElementById('clock-kz').textContent = new Intl.DateTimeFormat('en-GB',{...opts,timeZone:'Asia/Almaty'}).format(new Date());
+      document.getElementById('clock-nl').textContent = new Intl.DateTimeFormat('en-GB',{...opts,timeZone:'Europe/Amsterdam'}).format(new Date());
+      document.getElementById('clock-us').textContent = new Intl.DateTimeFormat('en-GB',{...opts,timeZone:'America/Chicago'}).format(new Date());
+    }catch(e){}
+  }
+  updateClocks();
+  setInterval(updateClocks, 1000);
 
-    function toggleMenu() {
-        menuBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    }
+  const nodeData = {
+    gh: {label:'Node // Bimbila, Ghana', title:'Home base', body:'Where the team works, and where every project — local or international — starts.', tags:'HQ · Design · Development · Strategy'},
+    kz: {label:'Node // Almaty, Kazakhstan', title:'Siberia Refinery', body:'Corporate investor-relations site for an energy company, built around uptime and safety documentation.', tags:'Custom HTML/CSS · DNS · SEO'},
+    nl: {label:'Node // Rotterdam, Netherlands', title:'Maxwell Storage Tanks', body:'Cross-market B2B platform connecting US and Dutch buyers, with a full industrial catalog.', tags:'Custom Dev · Zoho Mail · GitHub Pages'},
+    us: {label:'Node // Houston, USA', title:'Maxwell Storage Tanks', body:'The US-side counterpart of the same B2B platform, serving American industrial clients.', tags:'Custom Dev · Zoho Mail · GitHub Pages'}
+  };
+  const nodes = document.querySelectorAll('.net-node');
+  const readout = document.getElementById('readout');
+  function activateNode(key){
+    nodes.forEach(n => n.classList.toggle('active', n.dataset.node === key));
+    document.querySelectorAll('.route-active').forEach(r => r.classList.remove('on'));
+    if(key === 'kz'){ document.getElementById('route-gh-kz').classList.add('on'); }
+    if(key === 'nl'){ document.getElementById('route-gh-kz').classList.add('on'); document.getElementById('route-kz-nl').classList.add('on'); }
+    if(key === 'us'){ document.getElementById('route-gh-kz').classList.add('on'); document.getElementById('route-kz-us').classList.add('on'); }
+    const d = nodeData[key];
+    readout.innerHTML = `<div class="rd-label">${d.label}</div><h3>${d.title}</h3><p>${d.body}</p><div class="rd-tags">${d.tags}</div>`;
+  }
+  nodes.forEach(n => {
+    n.addEventListener('mouseenter', () => activateNode(n.dataset.node));
+    n.addEventListener('focus', () => activateNode(n.dataset.node));
+    n.addEventListener('click', () => activateNode(n.dataset.node));
+  });
 
-    if(menuBtn) {        menuBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-        
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if(navLinks.classList.contains('active')) toggleMenu();
-            });
-        });
-    }
-
-    // 3. Intersection Observer for Scroll Animations
-    document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll('.reveal-up, .reveal-scale, .stagger-container');
-        animatedElements.forEach(el => observer.observe(el));
+  // Style gallery -> feeds into wizard step 1
+  document.querySelectorAll('.style-select').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.style;
+      document.getElementById('quote').scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
+      const match = document.querySelector(`.option-btn[data-group-scope][data-value="${val}"]`);
+      selectOption(document.querySelector(`[data-step="1"] .option-btn[data-value="${val}"]`), 'business');
     });
+  });
+
+  // Quote wizard
+  const state = {business:null, need:null, timeline:null, name:'', contact:''};
+  let currentStep = 1;
+  const totalSteps = 4;
+
+  function selectOption(btn, group){
+    if(!btn) return;
+    document.querySelectorAll(`.wizard-step[data-step="${currentStep}"] .option-btn`).forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    state[group] = btn.dataset.value;
+    updateNextEnabled();
+  }
+
+  document.querySelectorAll('.wizard-step .option-grid').forEach(grid => {
+    const group = grid.dataset.group;
+    grid.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', () => selectOption(btn, group));
+    });
+  });
+
+  const nameInput = document.getElementById('q-name');
+  const contactInput = document.getElementById('q-contact');
+  [nameInput, contactInput].forEach(inp => {
+    inp.addEventListener('input', () => {
+      state.name = nameInput.value.trim();
+      state.contact = contactInput.value.trim();
+      updateNextEnabled();
+      if(currentStep === 4) renderSummary();
+    });
+  });
+
+  function updateNextEnabled(){
+    const nextBtn = document.getElementById('wizard-next');
+    let ok = false;
+    if(currentStep === 1) ok = !!state.business;
+    if(currentStep === 2) ok = !!state.need;
+    if(currentStep === 3) ok = !!state.timeline;
+    if(currentStep === 4) ok = state.name.length > 1 && state.contact.length > 3;
+    nextBtn.disabled = !ok;
+    if(currentStep === 4) nextBtn.textContent = 'Send via WhatsApp →';
+    else nextBtn.textContent = 'Next →';
+  }
+
+  function renderSummary(){
+    document.getElementById('wizard-summary').innerHTML =
+      `<span class="sk">Business:</span> ${state.business}<br>`+
+      `<span class="sk">Need:</span> ${state.need}<br>`+
+      `<span class="sk">Timeline:</span> ${state.timeline}`;
+  }
+
+  function goToStep(n){
+    document.querySelectorAll('.wizard-step').forEach(s => s.classList.toggle('active', Number(s.dataset.step) === n));
+    document.querySelectorAll('.wizard-progress .dot').forEach(d => {
+      const ds = Number(d.dataset.step);
+      d.classList.toggle('active', ds === n);
+      d.classList.toggle('done', ds < n);
+    });
+    document.getElementById('wizard-back').style.visibility = n === 1 ? 'hidden' : 'visible';
+    currentStep = n;
+    if(n === 4) renderSummary();
+    updateNextEnabled();
+  }
+
+  document.getElementById('wizard-back').addEventListener('click', () => {
+    if(currentStep > 1) goToStep(currentStep - 1);
+  });
+
+  document.getElementById('wizard-next').addEventListener('click', () => {
+    if(currentStep < totalSteps){
+      goToStep(currentStep + 1);
+    } else {
+      const msg = `Hi Spibody, I'd like a project quote.%0A%0ABusiness type: ${state.business}%0AWhat I need: ${state.need}%0ATimeline: ${state.timeline}%0AName: ${state.name}%0AContact: ${state.contact}`;
+      window.open(`https://wa.me/233257210750?text=${msg}`, '_blank');
+    }
+  });
+
+  updateNextEnabled();
 </script>
 
 </body>
-                           </html>
+</html>
+
