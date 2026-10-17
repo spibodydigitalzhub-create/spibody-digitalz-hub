@@ -206,7 +206,8 @@ h1{font-size:clamp(3.4rem,9.5vw,8.8rem);font-weight:600;line-height:.95;letter-s
 .about{padding:120px 5%}
 .about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-top:60px;align-items:start}
 .founder{aspect-ratio:4/5;border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden;display:flex;align-items:flex-end;padding:22px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.founder img{width:100%;height:100%;object-fit:cover;display:block;margin:-22px;padding:0}
+.founder.has-photo{padding:0}
+.founder img{width:100%;height:100%;object-fit:cover;display:block}
 .about-copy p{color:var(--muted);line-height:1.8;margin-bottom:22px;max-width:560px}
 .about-copy p b{color:var(--white)}
 .about-copy .hero-btns{margin-top:34px}
@@ -380,15 +381,15 @@ footer{border-top:1px solid var(--line);padding:70px 5% 30px}
   </div>
   <div class="testi-grid" data-reveal>
     <figure class="quote">
-      <blockquote>“I have worked with many Agencies, but you have did what i really experted.”</blockquote>
+      <blockquote>“I have worked with many agencies, but you did exactly what I expected.”</blockquote>
       <cite><b>Name, role</b>ArthurmallGh · Ghana</cite>
     </figure>
     <figure class="quote">
-      <blockquote>“Thank you for the great work done, we will work more.”</blockquote>
-      <cite><b>Name, role</b>Dandi CCI · Nigeria</cite>
+      <blockquote>“Thank you for the great work. We will work together again.”</blockquote>
+      <cite><b>Name, role</b>Dandi CCI · Ghana</cite>
     </figure>
     <figure class="quote">
-      <blockquote>“I love this work. its Exatly what i was experting..”</blockquote>
+      <blockquote>“I love this work. It's exactly what I was expecting.”</blockquote>
       <cite><b>Name, role</b>Maxwell Storage Tanks · USA</cite>
     </figure>
   </div>
@@ -428,9 +429,8 @@ footer{border-top:1px solid var(--line);padding:70px 5% 30px}
     <span class="idx">Founder-led</span>
   </div>
   <div class="about-grid">
-    <div class="founder" data-reveal>
-      <!-- Replace this text with: <img https://i.imgur.com/Agjjiwf.jpeg alt="Nignantoni N. Nathaniel, founder of Spibody Digitalz Hub"> -->
-      <span>Add founder photo</span>
+    <div class="founder has-photo" data-reveal>
+      <img src="https://i.imgur.com/Agjjiwf.jpeg" alt="Nignantoni N. Nathaniel, founder of Spibody Digitalz Hub" loading="lazy">
     </div>
     <div class="about-copy" data-reveal>
       <p><b>Nignantoni N. Nathaniel</b> founded Spibody Digitalz Hub and works on every project. You deal with the person who writes the code, not an account manager.</p>
@@ -513,9 +513,9 @@ footer{border-top:1px solid var(--line);padding:70px 5% 30px}
     <!-- ADDED: fill in the real details -->
     <ul class="band-facts">
       <li>Next cohort<b>TBA</b></li>
-      <li>Fee<b>GHS 2000</b></li>
-      <li>Format<b>Online]</b></li>
-      <li>Seats<b>+233257210750</b></li>
+      <li>Fee<b>GHS 2,000</b></li>
+      <li>Format<b>Online</b></li>
+      <li>Enrol<b>0257 210 750</b></li>
     </ul>
   </div>
   <a class="btn btn-dark" href="https://wa.me/233257210750?text=Hello%20Spibody,%20I'd%20like%20to%20join%20the%20next%20training%20cohort.">Join the next cohort
