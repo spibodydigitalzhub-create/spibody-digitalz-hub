@@ -133,7 +133,6 @@
   </script>
 
   <!-- Existing CSS and other required head elements can follow -->
-</head>
 <style>
 :root {
   --bg: #090909;
@@ -1458,6 +1457,175 @@ img {
   }
   }
 
+ /* MOVING TECH STACK WITH PERCENTAGES */
+.stack-marquee {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+}
+
+.stack-marquee::before,
+.stack-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.stack-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #090909, transparent);
+}
+
+.stack-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #090909, transparent);
+}
+
+.stack-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollStack 45s linear infinite;
+}
+
+.stack-marquee:hover .stack-track {
+  animation-play-state: paused;
+}
+
+.stack-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  white-space: nowrap;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.stack-item:hover {
+  transform: scale(1.05);
+}
+
+.stack-name {
+  font-family: var(--font);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.stack-percent {
+  font-family: var(--mono);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--lime);
+}
+
+@keyframes scrollStack {
+  to { transform: translateX(-50%); }
+  }
+  
+  /* TESTIMONIALS */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  transition: transform .35s, border-color .35s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 243, 30, 0.4);
+}
+
+.testimonial-quote {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c4c4bd;
+  position: relative;
+  padding-top: 10px;
+}
+
+.testimonial-quote::before {
+  content: "“";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 48px;
+  color: var(--lime);
+  font-family: var(--font);
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font: 14px var(--mono);
+  color: var(--lime);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--white);
+}
+
+.author-info span {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: 0.5px;
+}
+
+.testimonial-project {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 9px;
+  color: var(--lime);
+  border: 1px solid rgba(200, 243, 30, 0.3);
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* PRICING */
 
 .pricing-grid {
@@ -2388,49 +2556,54 @@ img {
 </section>
 
 <!-- TECHNOLOGY STACK -->
-
-<section class="section stack-section" id="stack">
+<!-- TECHNOLOGY STACK -->
+<section class="section stack-section" id="stack" style="background: #090909;">
   <div class="container">
     <div class="reveal">
-      <span class="eyebrow">04 / Technology</span>
-      <h2 class="stack-title">The right tools.<br>The right solution.</h2>
-      <p class="stack-description">
+      <span class="eyebrow" style="color: #090909;">04 / Technology</span>
+      <span class="eyebrow" style="color: #090909; margin-left: 10px;">&nbsp;</span> <!-- Spacer for alignment -->
+      <h2 class="stack-title" style="color: #090909;">The right tools.<br>The right solution.</h2>
+      <p class="stack-description" style="color: rgba(9,9,9,0.7);">
         Our toolkit covers modern front-end development, server-side
         engineering, data storage, APIs, deployment and design.
         The exact stack is selected according to each project's needs.
       </p>
     </div>
 
-    <div class="stack-list reveal reveal-delay-1">
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>JavaScript</span>
-      <span>TypeScript</span>
-      <span>React</span>
-      <span>Next.js</span>
-      <span>Node.js</span>
-      <span>Express.js</span>
-      <span>Python</span>
-      <span>Flask</span>
-      <span>REST APIs</span>
-      <span>SQLite</span>
-      <span>PostgreSQL</span>
-      <span>Prisma</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>Vercel</span>
-      <span>Render</span>
-      <span>Responsive Design</span>
-      <span>Authentication</span>
-      <span>Database Design</span>
-      <span>Web Performance</span>
-      <span>AI Integration</span>
-      <span>Figma</span>
-      <span>SEO Fundamentals</span>
-      <span>Web Accessibility</span>
+    <!-- MOVING TECH STACK LINE -->
+    <div class="stack-marquee reveal reveal-delay-1">
+      <div class="stack-track">
+        <!-- Set 1 -->
+        <div class="stack-item"><span class="stack-name">React.js</span><span class="stack-percent">98%</span></div>
+        <div class="stack-item"><span class="stack-name">Next.js</span><span class="stack-percent">96%</span></div>
+        <div class="stack-item"><span class="stack-name">Python</span><span class="stack-percent">95%</span></div>
+        <div class="stack-item"><span class="stack-name">HTML/CSS</span><span class="stack-percent">100%</span></div>
+        <div class="stack-item"><span class="stack-name">JavaScript</span><span class="stack-percent">97%</span></div>
+        <div class="stack-item"><span class="stack-name">TypeScript</span><span class="stack-percent">92%</span></div>
+        <div class="stack-item"><span class="stack-name">Node.js</span><span class="stack-percent">90%</span></div>
+        <div class="stack-item"><span class="stack-name">React Native</span><span class="stack-percent">88%</span></div>
+        <div class="stack-item"><span class="stack-name">Flutter</span><span class="stack-percent">85%</span></div>
+        <div class="stack-item"><span class="stack-name">Firebase</span><span class="stack-percent">93%</span></div>
+        <div class="stack-item"><span class="stack-name">PostgreSQL</span><span class="stack-percent">91%</span></div>
+        <div class="stack-item"><span class="stack-name">IoT / ESP32</span><span class="stack-percent">85%</span></div>
+        
+        <!-- Set 2 (Duplicate for seamless infinite loop) -->
+        <div class="stack-item"><span class="stack-name">React.js</span><span class="stack-percent">98%</span></div>
+        <div class="stack-item"><span class="stack-name">Next.js</span><span class="stack-percent">96%</span></div>
+        <div class="stack-item"><span class="stack-name">Python</span><span class="stack-percent">95%</span></div>
+        <div class="stack-item"><span class="stack-name">HTML/CSS</span><span class="stack-percent">100%</span></div>
+        <div class="stack-item"><span class="stack-name">JavaScript</span><span class="stack-percent">97%</span></div>
+        <div class="stack-item"><span class="stack-name">TypeScript</span><span class="stack-percent">92%</span></div>
+        <div class="stack-item"><span class="stack-name">Node.js</span><span class="stack-percent">90%</span></div>
+        <div class="stack-item"><span class="stack-name">React Native</span><span class="stack-percent">88%</span></div>
+        <div class="stack-item"><span class="stack-name">Flutter</span><span class="stack-percent">85%</span></div>
+        <div class="stack-item"><span class="stack-name">Firebase</span><span class="stack-percent">93%</span></div>
+        <div class="stack-item"><span class="stack-name">PostgreSQL</span><span class="stack-percent">91%</span></div>
+        <div class="stack-item"><span class="stack-name">IoT / ESP32</span><span class="stack-percent">85%</span></div>
+      </div>
     </div>
   </div>
-</section>
+  </section>
 
 <!-- PROCESS -->
 
@@ -2831,6 +3004,70 @@ img {
 
   </div>
 </section>
+  <!-- TESTIMONIALS -->
+<section class="section" id="testimonials" style="background: #0d0d0d; border-top: 1px solid rgba(255,255,255,.05); border-bottom: 1px solid rgba(255,255,255,.05);">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">07 / Client feedback</span>
+        <h2>Trusted by ambitious<br><span class="text-lime">brands worldwide.</span></h2>
+      </div>
+      <p>
+        We measure our success by the tangible impact our digital 
+        solutions have on our clients' operations and growth.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      
+      <!-- Testimonial 01 -->
+      <article class="testimonial-card reveal">
+        <div class="testimonial-quote">
+          Working with Spibody Digitalz was a game-changer for our retail operations. The marketplace they built is fast, intuitive, and has significantly improved our customer engagement and sales flow.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">NM</div>
+          <div class="author-info">
+            <h4>NexaMart Team</h4>
+            <span>E-commerce Platform</span>
+            <span class="testimonial-project">Marketplace Development</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonial 02 -->
+      <article class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote">
+          Nignantoni delivered a corporate web presence that perfectly captures our industrial brand. The attention to detail, responsive design, and seamless deployment exceeded our expectations.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">SR</div>
+          <div class="author-info">
+            <h4>Siberia Refinery</h4>
+            <span>Corporate Leadership</span>
+            <span class="testimonial-project">Corporate Website</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonial 03 -->
+      <article class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote">
+          As a non-profit, we needed a website that clearly communicates our mission and makes it easy for people to get involved. Spibody delivered a clean, professional, and highly effective platform.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">DC</div>
+          <div class="author-info">
+            <h4>Dandi CCI</h4>
+            <span>Organization Director</span>
+            <span class="testimonial-project">Non-Profit Website</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 <!-- PRICING -->
 
@@ -2838,7 +3075,7 @@ img {
   <div class="container">
     <div class="section-heading reveal">
       <div>
-        <span class="eyebrow">07 / Starting points</span>
+        <span class="eyebrow">08 / Starting points</span>
         <h2>Investment shaped<br>around <span class="text-lime">your goals.</span></h2>
       </div>
       <p>
@@ -2901,7 +3138,7 @@ img {
 <section class="section contact" id="contact">
   <div class="container">
     <div class="contact-box reveal">
-      <span class="eyebrow">08 / Have a project?</span>
+      <span class="eyebrow">09 / Have a project?</span>
 
       <h2>Let's build<br>something <span>meaningful.</span></h2>
 
@@ -2977,12 +3214,11 @@ img {
   </div>
 </footer>
 
-<a
-  class="whatsapp"
-  href="https://wa.me/233257210750?text=Hello%20SPIBODY%20DIGITALZ%20HUB"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Contact SPIBODY DIGITALZ HUB on WhatsApp">W</a>
+<a class="whatsapp" href="https://wa.me/233257210750?text=Hello%20SPIBODY%20DIGITALZ%20HUB" target="_blank" rel="noopener noreferrer" aria-label="Contact SPIBODY DIGITALZ HUB on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
 
 <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
