@@ -973,6 +973,367 @@ img {
 .about-value strong {
   font-weight: 500;
 }
+  /* PREMIUM ABOUT SECTION */
+
+.founder-role {
+  color: var(--lime) !important;
+  font: 11px var(--mono) !important;
+  letter-spacing: .5px;
+  margin-top: 12px !important;
+}
+
+.about-copy h2 {
+  overflow-wrap: anywhere;
+}
+
+.about-copy strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* MANIFESTO */
+
+.about-manifesto {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 65px;
+  padding: 75px 0;
+  margin-top: 100px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.manifesto-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.manifesto-index {
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: 1px;
+}
+
+.manifesto-content h3,
+.capabilities-heading h3,
+.about-technology h3 {
+  font-size: clamp(30px, 4.5vw, 53px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  font-weight: 600;
+}
+
+.manifesto-content h3 span {
+  color: var(--lime);
+}
+
+.manifesto-content p,
+.technology-copy p,
+.about-closing > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 23px;
+}
+
+/* CAPABILITIES */
+
+.about-capabilities {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.capabilities-heading {
+  margin-bottom: 45px;
+}
+
+.capabilities-heading h3 {
+  margin-top: 22px;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.capability-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 18px;
+  padding: 30px;
+  min-height: 190px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background .3s;
+}
+
+.capability-item:hover {
+  background: #12140d;
+}
+
+.capability-number {
+  color: var(--lime);
+  font: 11px var(--mono);
+}
+
+.capability-item h4,
+.promise-item h4 {
+  font-size: 18px;
+  letter-spacing: -.5px;
+}
+
+.capability-item p,
+.promise-item p {
+  margin-top: 12px;
+  max-width: 400px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* TECHNOLOGY APPROACH */
+
+.about-technology {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 65px;
+  padding: 90px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-technology h3 {
+  margin-top: 22px;
+}
+
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.technology-tags span {
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  color: #c7c7c0;
+  font: 10px var(--mono);
+  transition: color .25s, border-color .25s;
+}
+
+.technology-tags span:hover {
+  color: var(--lime);
+  border-color: var(--lime);
+}
+
+/* STUDIO PROMISE */
+
+.about-promise {
+  padding: clamp(28px, 6vw, 65px);
+  margin-top: 90px;
+  border: 1px solid rgba(200,243,30,.35);
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(200,243,30,.08),
+      transparent 45%
+    ),
+    #10100d;
+}
+
+.promise-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promise-status {
+  color: var(--lime);
+  font: 9px var(--mono);
+  letter-spacing: .7px;
+}
+
+.about-promise > h3 {
+  max-width: 850px;
+  margin-top: 35px;
+  font-size: clamp(35px, 6vw, 69px);
+  line-height: 1.03;
+  letter-spacing: -3.5px;
+}
+
+.about-promise > h3 span {
+  color: var(--lime);
+}
+
+.about-promise > p {
+  max-width: 720px;
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.promise-symbol {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--lime);
+  font: 10px var(--mono);
+}
+
+.promise-item h4 {
+  font-size: 15px;
+}
+
+.promise-item p {
+  font-size: 11px;
+}
+
+.promise-cta {
+  margin-top: 40px;
+}
+
+/* CLOSING STATEMENT */
+
+.about-closing {
+  max-width: 850px;
+  padding: 100px 0 15px;
+}
+
+.about-closing h3 {
+  margin-top: 25px;
+  font-size: clamp(38px, 6.5vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -4px;
+}
+
+.about-closing h3 span {
+  color: var(--lime);
+}
+
+.about-closing > p {
+  max-width: 650px;
+}
+
+.closing-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+}
+
+.closing-signature > span {
+  color: var(--lime);
+  font: 10px var(--mono);
+  letter-spacing: 1.5px;
+}
+
+.closing-signature strong {
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: -.2px;
+}
+
+/* ABOUT SECTION RESPONSIVENESS */
+
+@media (max-width: 900px) {
+  .about-manifesto,
+  .about-technology {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-manifesto {
+    margin-top: 65px;
+  }
+
+  .about-capabilities {
+    padding: 75px 0;
+  }
+
+  .about-technology {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-manifesto {
+    padding: 55px 0;
+    margin-top: 55px;
+  }
+
+  .manifesto-content h3,
+  .capabilities-heading h3,
+  .about-technology h3 {
+    letter-spacing: -1.5px;
+  }
+
+  .about-capabilities {
+    padding: 65px 0;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-item {
+    min-height: auto;
+    padding: 24px 18px;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+  }
+
+  .about-technology {
+    padding: 60px 0;
+  }
+
+  .about-promise {
+    margin-top: 60px;
+    padding: 26px 20px;
+  }
+
+  .about-promise > h3 {
+    letter-spacing: -1.8px;
+  }
+
+  .promise-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .promise-item {
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .promise-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .about-closing {
+    padding-top: 70px;
+  }
+
+  .about-closing h3 {
+    letter-spacing: -2px;
+  }
+  }
 
 /* PRICING */
 
@@ -1988,52 +2349,363 @@ img {
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT / FOUNDER & COMPANY PROFILE -->
 
 <section class="section about" id="about">
-  <div class="container about-grid">
-    <div class="founder-frame reveal">
-      <img
-        class="founder-photo"
-        src="https://i.imgur.com/Agjjiwf.jpeg"
-        alt="SPIBODY DIGITALZ HUB founder"
-        loading="lazy">
-      <span class="founder-label">Building with purpose</span>
+  <div class="container">
+
+    <!-- SECTION INTRODUCTION -->
+    <div class="section-heading reveal">
+      <div>
+        <span class="eyebrow">06 / The studio</span>
+        <h2>
+          Engineering beyond<br>
+          <span class="text-lime">the ordinary.</span>
+        </h2>
+      </div>
+
+      <p>
+        A founder-led technology studio transforming ambitious ideas
+        into sophisticated digital products, intelligent systems,
+        and scalable technological infrastructure.
+      </p>
     </div>
 
-    <div class="about-copy reveal reveal-delay-1">
-      <span class="eyebrow">06 / The studio</span>
-      <h2>Technology should open doors, not create barriers.</h2>
+    <!-- FOUNDER AND INTRODUCTION -->
+    <div class="about-grid">
 
-      <p>
-        I'm Nignantoni N. Nathaniel, a developer building digital
-        experiences through SPIBODY DIGITALZ HUB. My focus is on
-        creating useful online platforms that help businesses,
-        organisations and entrepreneurs establish their presence,
-        serve customers and grow.
-      </p>
+      <div class="founder-frame reveal">
+        <img
+          class="founder-photo"
+          src="https://i.imgur.com/Agjjiwf.jpeg"
+          alt="Nignantoni N. Nathaniel, founder and lead engineer of Spibody Digitalz Hub"
+          loading="lazy"
+        >
 
-      <p>
-        From commerce websites to custom web applications, every
-        project is an opportunity to learn, solve a problem and
-        deliver something meaningful.
-      </p>
+        <span class="founder-label">
+          Founder & Lead Engineer
+        </span>
+      </div>
 
-      <div class="about-values">
-        <div class="about-value">
-          <span>Based in</span>
-          <strong>Bimbilla, Ghana</strong>
+      <div class="about-copy reveal reveal-delay-1">
+
+        <span class="eyebrow">01 / The founder</span>
+
+        <h2>
+          Nignantoni N. Nathaniel
+        </h2>
+
+        <p class="founder-role">
+          Founder & Lead Engineer · Spibody Digitalz Hub
+        </p>
+
+        <p>
+          I am Nignantoni N. Nathaniel, founder and lead engineer
+          at <strong>Spibody Digitalz Hub</strong>, a technology-driven
+          development studio committed to engineering sophisticated
+          digital solutions for businesses, institutions, and
+          organizations operating in an increasingly interconnected world.
+        </p>
+
+        <p>
+          Proudly rooted in Ghana and guided by a global engineering
+          perspective, we specialize in the conception, architecture,
+          development, and deployment of high-performance web applications,
+          cross-platform mobile platforms, and intelligent Internet of
+          Things (IoT) integrations.
+        </p>
+
+        <p>
+          Our work spans diverse sectors, including commerce, education,
+          nonprofit initiatives, and industrial enterprises. We approach
+          every engagement with a clear objective: transforming complex
+          operational challenges into practical, scalable, and secure
+          digital solutions.
+        </p>
+
+        <div class="about-values">
+          <div class="about-value">
+            <span>Founder</span>
+            <strong>Nignantoni N. Nathaniel</strong>
+          </div>
+
+          <div class="about-value">
+            <span>Headquarters</span>
+            <strong>Ghana, West Africa</strong>
+          </div>
+
+          <div class="about-value">
+            <span>Specialization</span>
+            <strong>Software & Digital Engineering</strong>
+          </div>
+
+          <div class="about-value">
+            <span>Operating philosophy</span>
+            <strong>Precision · Integrity · Innovation</strong>
+          </div>
         </div>
-        <div class="about-value">
-          <span>Focus</span>
-          <strong>Web & Software Development</strong>
-        </div>
-        <div class="about-value">
-          <span>Approach</span>
-          <strong>Practical · Collaborative · Iterative</strong>
-        </div>
+
       </div>
     </div>
+
+    <!-- ENGINEERING PHILOSOPHY -->
+    <div class="about-manifesto reveal">
+
+      <div class="manifesto-label">
+        <span class="eyebrow">02 / Our philosophy</span>
+        <span class="manifesto-index">BUILT WITH INTENTION</span>
+      </div>
+
+      <div class="manifesto-content">
+        <h3>
+          We don't merely write code.
+          <span>We architect digital infrastructure.</span>
+        </h3>
+
+        <p>
+          Exceptional software requires more than functional code.
+          It demands deliberate architecture, thoughtful user
+          experiences, robust security, and a clear understanding
+          of the problem being solved.
+        </p>
+
+        <p>
+          Whether developing an intelligent school management
+          ecosystem with automated assessment and academic analytics,
+          a secure NGO donation platform, an e-commerce marketplace,
+          or a custom enterprise application, we engineer solutions
+          around real operational requirements and long-term objectives.
+        </p>
+
+        <p>
+          Our priority is not unnecessary complexity. It is delivering
+          technology that performs reliably, scales intelligently,
+          and creates tangible value for the people who depend on it.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CAPABILITIES -->
+    <div class="about-capabilities reveal">
+
+      <div class="capabilities-heading">
+        <span class="eyebrow">03 / Our capabilities</span>
+
+        <h3>
+          Comprehensive engineering.<br>
+          <span class="text-lime">Purpose-built solutions.</span>
+        </h3>
+      </div>
+
+      <div class="capabilities-grid">
+
+        <article class="capability-item">
+          <span class="capability-number">01</span>
+
+          <div>
+            <h4>Web Applications</h4>
+
+            <p>
+              High-performance web platforms, business applications,
+              dashboards, portals, and interactive digital experiences
+              engineered around your operational requirements.
+            </p>
+          </div>
+        </article>
+
+        <article class="capability-item">
+          <span class="capability-number">02</span>
+
+          <div>
+            <h4>Mobile Development</h4>
+
+            <p>
+              Cross-platform mobile experiences designed to deliver
+              consistent functionality, intuitive navigation, and
+              dependable performance across supported devices.
+            </p>
+          </div>
+        </article>
+
+        <article class="capability-item">
+          <span class="capability-number">03</span>
+
+          <div>
+            <h4>Enterprise & Institutional Systems</h4>
+
+            <p>
+              Purpose-built management platforms for education,
+              administration, commerce, financial workflows, and
+              other complex organizational processes.
+            </p>
+          </div>
+        </article>
+
+        <article class="capability-item">
+          <span class="capability-number">04</span>
+
+          <div>
+            <h4>Intelligent Integrations</h4>
+
+            <p>
+              APIs, automation workflows, AI integrations, and
+              connected technologies that improve efficiency and
+              establish more cohesive digital ecosystems.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- TECHNOLOGY APPROACH -->
+    <div class="about-technology reveal">
+
+      <div>
+        <span class="eyebrow">04 / Our methodology</span>
+
+        <h3>
+          The right technology.<br>
+          <span class="text-lime">Precisely applied.</span>
+        </h3>
+      </div>
+
+      <div class="technology-copy">
+        <p>
+          Every project presents a different combination of technical
+          requirements, commercial objectives, and user expectations.
+          We therefore select our technology stack according to the
+          problem, rather than forcing every project into the same framework.
+        </p>
+
+        <p>
+          Depending on the scope, our engineering toolkit includes
+          React, Next.js, Node.js, Python, Flutter, relational databases,
+          REST APIs, and WordPress. We prioritize maintainability,
+          performance, security, and cost-conscious implementation
+          throughout the development lifecycle.
+        </p>
+
+        <div class="technology-tags">
+          <span>React</span>
+          <span>Next.js</span>
+          <span>Node.js</span>
+          <span>Python</span>
+          <span>Flutter</span>
+          <span>REST APIs</span>
+          <span>Database Architecture</span>
+          <span>WordPress</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOUNDER-LED DIFFERENTIATION -->
+    <div class="about-promise reveal">
+
+      <div class="promise-top">
+        <span class="eyebrow">05 / The Spibody commitment</span>
+
+        <span class="promise-status">
+          DIRECT ENGINEERING ACCESS
+        </span>
+      </div>
+
+      <h3>
+        Direct collaboration.<br>
+        <span>Accountable engineering.</span><br>
+        No unnecessary complexity.
+      </h3>
+
+      <p>
+        As a founder-led studio, we maintain a direct relationship
+        between the client and the engineer responsible for the work.
+        From initial consultation and technical planning through
+        implementation, deployment, and subsequent refinement,
+        our approach emphasizes transparency, clear communication,
+        and responsible execution.
+      </p>
+
+      <div class="promise-grid">
+
+        <div class="promise-item">
+          <span class="promise-symbol">01 /</span>
+
+          <h4>Direct accountability</h4>
+
+          <p>
+            Work directly with the founder and lead engineer
+            throughout the project lifecycle.
+          </p>
+        </div>
+
+        <div class="promise-item">
+          <span class="promise-symbol">02 /</span>
+
+          <h4>Purposeful architecture</h4>
+
+          <p>
+            Build around defined requirements, sound technical
+            decisions, and realistic growth objectives.
+          </p>
+        </div>
+
+        <div class="promise-item">
+          <span class="promise-symbol">03 /</span>
+
+          <h4>Transparent collaboration</h4>
+
+          <p>
+            Maintain clear communication, defined deliverables,
+            and a shared understanding of project progress.
+          </p>
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-primary promise-cta">
+        Discuss your project <span class="arrow">↗</span>
+      </a>
+
+    </div>
+
+    <!-- CLOSING STATEMENT -->
+    <div class="about-closing reveal">
+
+      <span class="eyebrow">06 / Our vision</span>
+
+      <h3>
+        Building technology<br>
+        that <span>moves businesses forward.</span>
+      </h3>
+
+      <p>
+        We aim to create digital products that strengthen organizations,
+        improve operational efficiency, expand access to opportunities,
+        and establish lasting technological value.
+      </p>
+
+      <p>
+        From emerging businesses seeking a formidable digital foundation
+        to established institutions pursuing operational modernization,
+        Spibody Digitalz Hub brings a practical engineering mindset
+        to turning ambitious ideas into working solutions.
+      </p>
+
+      <div class="closing-signature">
+        <span>SPIBODY DIGITALZ HUB</span>
+
+        <strong>
+          Engineering Intelligent Solutions.<br>
+          Building Digital Infrastructure.<br>
+          Powering the Future.
+        </strong>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
